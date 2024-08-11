@@ -1,0 +1,217 @@
+<app-navbar></app-navbar>
+<section class="common-header">
+  <div class="container">
+    <div class="row vh-50 d-flex justify-content-left align-items-center ">
+      <div class="col-lg-10">
+        <h1 class="fw-bold">Our simple home buying process works.</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="how-it-works">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9 col-md-9 col-12">
+        <div>
+          <h4>Experience a faster, stress-free house sale.</h4>
+          <p>We understand that the traditional real estate market isn’t ideal for everyone. We pay cash for
+            houses because sometimes people need a faster, more straightforward solution.</p>
+          <p>We Buy Ugly Houses has been in business since 1996—that’s over 25 years of experience. We’ve
+            purchased over 140,000 houses and have the experience to deal with difficult situations and get
+            through roadblocks. That’s just one of the reasons why we’ve achieved a 95%* customer
+            satisfaction
+            rating among our sellers. </p>
+        </div>
+
+        <div>
+          <h4>How to sell a house fast in three easy steps</h4>
+          <img src="../../../assets/how-it-works/howtosellhouse.png" width="100%" alt="">
+        </div>
+
+        <div>
+          <h4>How we determine your offer</h4>
+          <p>To create our valuation of your property, we consider local market conditions and neighborhood
+            comparative sales, along with what we’ve learned about your house. We’ll do a quick check around
+            the exterior of the house, then the bedrooms, bathrooms, water heater, HVAC system, and any
+            other major areas at the property. Many elements go into making an offer, and you can trust that
+            we’ve considered each carefully. </p>
+          <p>After our walkthrough, we’ll talk about how the process works and how it may fit your situation.
+            You don’t have to do anything if we come to your house and make an offer, and you won’t be
+            charged a cent for our visit. Making an appointment and getting a cash offer from us is free,
+            and you’re free to consider, accept, or decline—whatever is right for you. </p>
+          <p>Our local property specialist will know your area well and may make you a fair offer on the spot.
+          </p>
+        </div>
+
+        <div>
+          <h4>What to expect on our visit</h4>
+          <p>Our no-obligation consultation will typically take about an hour, in which one of our property
+            specialists will assess your home and answer any questions you may have. You don’t need to do
+            anything before we come over to see your house—no repairs, updates, or even cleaning. During the
+            walkthrough, we will inspect the exterior and interior of your property, as well as ask for a
+            tour of the rooms and utilities. We buy houses “as is,” which means we can buy houses in almost
+            any condition.</p>
+        </div>
+
+        <section class="statement-highlight module">
+          <div class="row">
+            <div class="column text-center">
+              <div class="statement-highlight-inner">
+                <p id="isPasted">Our local property specialist will know your area well and may make you a fair offer on
+                  the spot.&nbsp;</p>
+                <p></p>
+                <div class="row justify-content-center align-items-center">
+                    <a class="btn btn-danger" href="contact-us">Contact Us Today</a>
+                </div>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="mt-3">
+          <h4>Sound almost too easy? Here’s more information about the process:</h4>
+          <div class="row g-5 mb-4">
+            <div class="col-lg-4">
+              <img src="../../../assets/how-it-works/inpersonassesmentcenter.jpg" width="100%" alt="">
+
+            </div>
+            <div class="col-lg-8">
+              <p class="fs-5">In-person assessments create accurate offers.</p>
+              <p>Our property specialists live and work where you do, and our knowledge of the local real
+                estate market means we can provide a fair, all-cash offer right away, often on the same
+                day as our visit. A walkthrough allows us to assess the property more thoroughly than
+                typical online-only valuations, and it saves time since we're able to understand and see
+                all the aspects of the house from the start.</p>
+            </div>
+          </div>
+          <div class="row g-5">
+            <div class="col-lg-4 order-lg-2 order-md-1 order-1">
+              <img src="../../../assets/how-it-works/closequickly.jpg" width="100%" alt="">
+
+            </div>
+            <div class="col-lg-8 order-lg-1 order-md-2 order-2">
+              <p class="fs-5">Close quickly or on your timeline.</p>
+              <p>If you accept our no-obligation offer, we can move on to closing. Thanks to our strong
+                relationships with lenders, we close quickly, often in as little as 3 weeks. If you need
+                more time, we can work with your schedule. We also pay typical closing costs, saving you
+                money. No matter what situation you’re facing, you can get the sale you want when you
+                need it. </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-3 col-md-3 col-12  order-lg-2 order-md-2 order-1">
+        <div class="fifth-section py-5 px-3  rounded rounded-4">
+          <h4 class="pb-4">Set up a free, no-commitment home review.</h4>
+
+          <form #contactForm="ngForm" (ngSubmit)="contactFormData(contactForm)" class="needs-validation" novalidate="">
+
+            <div class="row">
+
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" autocomplete="new-password" id="floatingInput"
+                    [(ngModel)]="formData.firstName" placeholder="First Name" name="firstName" #firstNameRef="ngModel"
+                    ngModel required="">
+                  <label for="floatingInput">First name*</label>
+                </div>
+              </div>
+              <div class="col-lg-6  col-md-6 col-12">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" autocomplete="new-password" id="floatingInput"
+                    [(ngModel)]="formData.lastName" placeholder="Last Name" name="lastName" #lastNameRef="ngModel"
+                    ngModel required="">
+                  <label for="floatingInput">Last name*</label>
+                </div>
+              </div>
+
+              <div class="col-lg-12">
+                <div class="form-floating mb-3">
+                  <input type="tel" class="form-control" autocomplete="new-password" id="floatingInput"
+                    [(ngModel)]="formData.phoneNumber" placeholder="Phone Number" [inputMask]="phoneNumberInputMask"
+                    name="phoneNumber" #phoneNumberRef="ngModel" ngModel required="">
+                  <label for="floatingInput">Phone Number*</label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" autocomplete="new-password" id="floatingInput"
+                    [(ngModel)]="formData.email" placeholder="Email" name="email" #emailRef="ngModel" ngModel
+                    required="">
+                  <label for="floatingInput">Email*</label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" autocomplete="new-password" ngx-google-places-autocomplete
+                    [options]="options" (onAddressChange)="handleAddressChange($event)" id="floatingInput"
+                    [(ngModel)]="formData.sessionFullStreetAddress" placeholder="Property address" name="streetAddress"
+                    #streetAddressRef="ngModel" ngModel required="">
+                  <label for="floatingInput">Property address*</label>
+                  <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                    <img src="../../../assets/images/powered-by-google-transparent.png" width="100" alt="">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="mt-4 form-check" id="confirm-msg">
+              <input type="checkbox" class="form-check-input" name="confirm" [(ngModel)]="formData.confirm" required>
+              <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and provide my
+                consent
+                for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the phone
+                number provided
+                above via text (SMS) or calling using automated dialing technology to schedule an appointment and for
+                marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent not
+                required to
+                purchase services. Message and data rates may apply. Message frequency varies by account. To opt-out at
+                any
+                time reply STOP to the message you receive. For more information, please review our <a
+                  href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy"
+                  target="_blank">Privacy
+                  Policy</a>.
+              </label>
+
+            </div>
+            <div class="mt-4">
+              <!-- <button class="btn btn-danger px-5 py-3" id="button-vary1" type="submit" 
+                  [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+              <button type="submit" class="btn btn-warning px-5 py-3" id="button-vary1"
+                [disabled]="!contactForm.form.valid">Get my fair cash offer</button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="let-get-you-moving">
+  <div class="container">
+    <div class="row justify-content-center align-items-center text-center">
+      <div class="col-lg-10 col-12">
+        <p class="fs-4 fw-bold">Let’s get you moving with cash in hand and peace of mind.</p>
+        <p class="fs-5">With over 25 years of experience, we’re able to provide the guidance, support, and
+          know-how needed to
+          make the selling process simple. We work with our sellers every step of the way from consultation to
+          closing.</p>
+
+      </div>
+
+    </div>
+    <div class="row justify-content-center align-items-center text-center ">
+      <div class="col-lg-3 col-md-4 col-12">
+        <a class="btn btn-warning p-3" href="">Move Forward Today</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

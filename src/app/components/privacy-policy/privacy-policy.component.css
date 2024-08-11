@@ -1,0 +1,13 @@
+.first-section{
+    padding: 80px 0;
+}
+
+.first-section a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #a81c1c !important;
+}
+
+.first-section a:hover {
+    text-decoration: underline;
+}

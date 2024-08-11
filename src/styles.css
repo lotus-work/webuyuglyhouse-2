@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/chiller');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Lato", sans-serif; */
+
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.section-title {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #197d7b;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.section-subheading {
+  margin-bottom: 0;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Base button styles */
+.btn {
+  height: 60px;
+  width: 315px;
+  max-width: 100%;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 3px 6px transparent;
+  transition: all .3s ease-in-out;
+}
+
+/* Success button */
+.btn-success {
+  background: #3ebbb1;
+  border-color: #3ebbb1;
+}
+
+.btn-success:hover {
+  background: #3ebbb1;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.532);
+}
+
+
+/* Outline success button */
+.btn-outline-success {
+  background: transparent;
+  border-color: #3ebbb1;
+  color: #3ebbb1;
+}
+
+.btn-outline-success:hover {
+  background: #3ebbb1;
+  color: #fff;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.532);
+}
+
+/* Danger button */
+.btn-danger {
+  background-color: rgba(240, 65, 52, 1);
+  border-color: rgba(240, 65, 52, 1);
+}
+
+.btn-danger:hover {
+  background-color: rgba(240, 65, 52, 1);
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.532);
+}
+
+/* Warning button */
+.btn-warning {
+  background-color: #ffdd1b;
+  border-color: #ffdd1b;
+  color: #000000;
+}
+
+.btn-warning:hover {
+  background-color: #ffdd1b;
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.532);
+}
+
+
+@media screen and (max-width: 480px) {
+  body {
+    zoom: 100% important;
+  }
+}
+
+hr {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+
+.header h2,
+h3 {
+  /* font-family: 'Merriweather', serif; */
+
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+
+.responsive-iframe {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+.pac-container {
+  z-index: 1051 !important;
+}
+
+
+/* MAPBOX */
+
+.marker {
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.mapboxgl-marker {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-color: lightblue;
+}
+
+
+.mapboxgl-popup-content {
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+  padding: 20px;
+  pointer-events: auto;
+
+}
+
+.mapboxgl-popup-content p {
+  margin-bottom: 0 !important;
+}
+
+.mapboxgl-popup-close-button {
+  padding: 8px;
+}
+
+.ngx-pagination {
+  padding-left: 10px !important;
+}
+
+
+#confirm-msg label {
+  font-size: 12px;
+}
+
+.iSciCy {
+  display: none !important;
+}
+
+.highlight-hyerlink{
+  color: #ffdd05 !important;
+}
+
+.responsive-text {
+  text-align: center; /* Default text alignment for small screens */
+}
+
+@media (min-width: 992px) {
+  .responsive-text {
+    text-align: left; /* Text alignment for large screens (lg and up) */
+  }
+}

@@ -1,0 +1,169 @@
+<app-navbar></app-navbar>
+<!-- <app-location-header heading="IBuyUglyHouses® pays cash for houses." subheading="How It All Works"></app-location-header> -->
+
+
+<section class="common-header">
+  <div class="container overlay-text">
+    <div data-scrollax-parent="true" class="row d-flex justify-content-center align-items-center">
+      <div class="col-lg-10 col-md-12 col-sm-12 col-12 text-center py-5">
+        <h1>Find Local Home Buyers Near You</h1>
+        <h3 class="mb-5">Search by City and State -or- Zip Code</h3>
+        <div class="row justify-content-center align-items-center">
+        <div class="col-lg-10">
+            <div class="row bg-white py-3 mx-1  rounded-3">
+               
+                  <div class="col">
+                 
+                    <input  ngx-google-places-autocomplete [options]="options"
+                    (onAddressChange)="handleAddressChange($event)" name="address" type="text" class="form-control" placeholder="Enter your property address" aria-label="Enter you address"
+                      aria-describedby="button-addon2" #addressInput>
+        
+                  </div>
+                  <div class="col-lg-5 col-md-2 col-12 pt-lg-0 pt-md-0 pt-3 d-flex justify-content-center align-items-center">
+                     <button class="btn btn-danger col py-3" type="button" id="button-vary1" (click)="getAddress(target)" [disabled]="!addressInput.value">Search</button>
+                     <span class="px-3 d-none d-lg-block">or</span>
+                     <button class="btn btn-success col py-3 d-none d-lg-block" type="button" id="button-vary1" (click)="getMap(mapView)" >View Map</button>
+                    </div>
+                    <!-- <div class="col-lg-2 col-md-2 col-12 pt-lg-0 pt-md-0 pt-3">
+                      <span>or</span>
+                      <button class="btn btn-danger col-12 py-3" type="button" id="button-vary1" (click)="saveAddress()" [disabled]="!addressInput.value">View Map</button>
+                     </div> -->
+        
+            </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div #target>
+
+  <section class="second-section bg-light">
+
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3 " *ngIf="this.onSearchCityFound.length == 1">
+        <!-- {{this.isFound}}
+  
+        <br>
+        {{this.onSearchCityFound.length}} -->
+        <div class="col-lg-12 col-12 mb-4 text-center">
+          <h3>Showing nearby results for {{this.formattedAddress}}.</h3>
+              
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <div class="img-container">
+              <a href="location/{{generateSlug(this.onSearchCityFound[0].name)}}" target="_blank">
+                <img src={{this.onSearchCityFound[0].coverPhoto}}  class="card-img-top" width="100%" alt="..." ></a>
+              <div class="overlay">
+                <div class="centered">
+                  <h4 class="card-title">{{this.onSearchCityFound[0].name}}, {{this.onSearchCityFound[0].providence}}</h4>
+                </div>
+              </div>
+            </div>
+          
+            <div class="card-body mb-4">
+           
+              <h5 class="mt-4"><a href="tel:18889869883"> <img src="../../../assets/images/navbar/phone.svg" width="12px" alt=""> 1 (888) 986-9883</a></h5>
+            
+              <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true" style="color: #1aa398;"></i> {{this.onSearchCityFound[0].desc}}</p>
+              <div class="quick-link">
+                <a href="location/{{generateSlug(this.onSearchCityFound[0].name)}}" class="me-2 fw-bold" target="_blank">View Location |</a>
+              <a href="contact-us" target="_blank">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+  
+      
+  
+        
+        <div class="row" *ngIf="this.onSearchCityFound.length == 0 && this.noSearchShow == 'true'">
+          <!-- {{this.isFound}} 
+  
+          <br>
+          {{this.onSearchCityFound.length}}
+        -->
+          <div class="col-lg-12 col-md-12 col-12 text-center mb-4 " id="notFound">
+            <!-- <h1>{{this.cityNameFound}}</h1> -->
+            <h3>We couldn’t find results for {{this.formattedAddress}}.</h3>
+            <h5>Please adjust your search, call <a href="tel:18889869883">1 (888) 986-9883</a> or <a href="contact-us" target="_blank"> contact us</a> to find nearest location.</h5>
+          </div>
+        </div>
+      
+    </div>
+  
+    <div class="container" *ngIf="this.isFound =='false'">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+        <div class="col mb-4" *ngFor="let city of citiesData | paginate: { itemsPerPage: 6, currentPage: p }; index as i;">
+          <div class="card">
+            <div class="img-container">
+              <a href="location/{{generateSlug(city.name)}}" target="_blank">
+                <img src="{{city.coverPhoto}}" class="card-img-top" width="100%" alt="...">
+              </a>
+              <div class="overlay">
+                <div class="centered">
+                  <h4>{{city.name}}, {{city.providence}}</h4>
+                </div>
+              </div>
+            </div>
+           
+            <div class="card-body  mb-4">
+             
+              <h5 class="mt-4"><a href="tel:18889869883"> <img src="../../../assets/images/navbar/phone.svg" width="12px" alt=""> 1 (888) 986-9883</a></h5>
+              <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true" style="color: #1aa398;"></i> {{city.desc}}</p> 
+              <div class="quick-link">
+                <a href="location/{{generateSlug(city.name)}}" class="me-2 fw-bold" target="_blank">View Location |</a>
+              <a href="contact-us" target="_blank">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-12 col-12 text-center pagination justify-content-center align-items-center">
+          <pagination-controls (pageChange)="p = $event" ></pagination-controls>
+       
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  
+
+</div>
+
+<div #mapView>
+  <div>
+
+    <app-map></app-map>
+  </div>
+
+</div>
+
+<section class="first-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-12">
+        <h2 class="pb-4">Why Wait? Skip the Stress and Sell Your House to Us.</h2>
+        <p>If you’re wondering: "where can I sell my house, and how can I sell my house quickly?", we’ve got you
+          covered. Nationwide, our independent IBuyUglyHouses property specialists are locally based, living and
+          working
+          near you. They have the market knowledge needed to make a fair cash offer for your house that you can trust. A
+          quick and easy selling process is a lot closer than you realise. <a href="contact-us" target="_blank">Contact
+            us</a> today to sell homes fast.</p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-footer></app-footer>

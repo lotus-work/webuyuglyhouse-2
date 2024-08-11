@@ -1,0 +1,51 @@
+.intro{
+    /* background-color: #a81c1c; */
+    color: #fff;
+    padding: 140px 0;
+    /* background: rgba(0, 0, 0, 0) url() no-repeat scroll center center/cover; */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.32),rgba(0,0,0,.767)),url(https://creativelayers.net/themes/homez-html/images/home/home-8.jpg) no-repeat center center fixed; */
+    /* background-position: center bottom; */
+    
+    background-image: url(../../../assets/images/investor-sign-up/investor.jpg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+}
+.intro::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(162, 75, 75, 0.84) 19.27%, rgba(217, 217, 217, 0) 100%);
+    z-index: -1;
+}
+
+
+/* first */
+.first-section{
+    padding: 100px 0;
+     /* color: white; */
+}
+
+.back-red{
+    /* background: linear-gradient(100deg, rgba(239, 208, 208, 0.84) 1.27%, rgba(255, 255, 255, 0) 100%); */
+    background-color: #ff9999;
+}
+
+.form-group label{
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+
+.form-group small{
+    color: black !important;
+}
+
+
+.form-floating p{
+    font-weight: 800;
+}

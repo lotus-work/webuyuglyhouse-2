@@ -1,0 +1,57 @@
+.first-section{
+    padding: 100px 0;
+}
+
+/* Fifth */
+
+
+.second-section hr{
+    border: 1px solid red !important
+}
+
+
+
+.img-container {
+    position: relative;
+    
+  }
+  .img-container img{
+    filter: brightness(50%); 
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.3); /* Red with 30% opacity */
+    z-index: 1; /* Place the overlay on top of the image */
+  }
+  
+
+  .centered {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Place the content on top of the overlay */
+    color: white; /* Text color on the red overlay */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for better readability */
+  }
+  
+  
+
+  
+
+.first-section a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #a81c1c !important;
+}
+
+.first-section a:hover {
+  text-decoration: underline;
+}

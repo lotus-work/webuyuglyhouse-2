@@ -1,0 +1,40 @@
+<section class="common-header">
+    <div class="container overlay-text">
+      <div data-scrollax-parent="true" class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-10 col-md-12 col-sm-12 col-12 text-center py-5">
+          <h1>{{heading}}</h1>
+          <h3 class="subheading mb-5">{{subheading}}</h3>
+
+          <div class="row justify-content-center align-items-center">
+          <div class="col-lg-10">
+              <div class="row bg-white py-3 mx-1 border rounded-3">
+                  <div class="col-lg-1 col-md-1 col-2 m-auto">
+                      <img src="../../../assets/home/common-header/icons8-location-48.png" width="30" alt="">
+                    </div>
+                    <div class="col">
+                      <input  ngx-google-places-autocomplete [options]="options"
+                      (onAddressChange)="handleAddressChange($event)" name="address" type="text" class="form-control" placeholder="Enter your a property address" aria-label="Enter you address"
+                        aria-describedby="button-addon2" #addressInput>
+          
+                    </div>
+                    <div class="col-lg-5 col-md-2 col-12 pt-lg-0 pt-md-0 pt-3 d-flex justify-content-center align-items-center">
+                       <button class="btn btn-danger col py-3" type="button" id="button-vary1" (click)="saveAddress()" [disabled]="!addressInput.value">Search</button>
+                       <span class="px-3 d-none d-lg-block">or</span>
+                       <button class="btn btn-success col py-3 " type="button" id="button-vary1" (click)="saveAddress()" >View Map</button>
+                    
+                      </div>
+                      <!-- <div class="col-lg-2 col-md-2 col-12 pt-lg-0 pt-md-0 pt-3">
+                        <span>or</span>
+                        <button class="btn btn-danger col-12 py-3" type="button" id="button-vary1" (click)="saveAddress()" [disabled]="!addressInput.value">View Map</button>
+                       </div> -->
+          
+              </div>
+          </div>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  

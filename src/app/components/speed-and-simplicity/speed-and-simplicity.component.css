@@ -1,0 +1,53 @@
+.first-section{
+    padding: 100px 0;
+}
+
+
+
+.third-section{
+    padding: 100px 0;
+}
+
+
+
+.fourth-section{
+    padding: 100px 0;
+}
+
+.fourth-section a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #a81c1c !important;
+}
+
+.fourth-section a:hover {
+    text-decoration: underline;
+}
+
+.fifth-section{
+    padding: 100px 0;
+}
+.sixth-section{
+    padding: 100px 0;
+}
+
+@media only screen and (max-width: 992px){
+
+    .sixth-section img{
+        width: 100px;
+    }
+    
+}
+.seventh-section{
+    padding: 100px 0;
+}
+
+.seventh-section a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #a81c1c !important;
+}
+
+.seventh-section a:hover {
+    text-decoration: underline;
+}

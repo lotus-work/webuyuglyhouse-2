@@ -1,0 +1,76 @@
+.intro{
+    /* background-color: #a81c1c; */
+    color: #fff;
+    padding: 140px 0;
+    /* background: rgba(0, 0, 0, 0) url() no-repeat scroll center center/cover; */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.32),rgba(0,0,0,.767)),url(https://creativelayers.net/themes/homez-html/images/home/home-8.jpg) no-repeat center center fixed; */
+    /* background-position: center bottom; */
+    
+    background-image: url(https://www.nerdwallet.com/assets/blog/wp-content/uploads/2019/07/8-First-Time-Home-Buyer-Loans-and-Programs.jpg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+.intro::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(162, 75, 75, 0.84) 19.27%, rgba(217, 217, 217, 0) 100%);
+    z-index: -1;
+}
+
+.first-section{
+    padding: 60px 0;
+}
+
+
+.progress-bar {
+    width: 50%;
+}
+
+/* second */
+
+.second-section{
+    padding: 100px 0;
+}
+
+
+.second-section p a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #a81c1c !important;
+}
+
+.second-section p a:hover {
+    text-decoration: underline;
+}
+
+.first-section .form-check a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #a81c1c !important;
+}
+.first-section .form-check a:hover {
+    text-decoration: underline;
+}
+
+
+
+.small-intro {
+    background: #ffdd05 !important;
+    padding: 40px 0 0 0;
+}
+
+.small-intro h5 {
+    font-weight: 700;
+}
+
+.small-intro p {
+    font-weight: 500;
+}
+

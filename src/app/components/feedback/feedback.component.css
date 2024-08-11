@@ -1,0 +1,56 @@
+.intro{
+    /* background-color: #a81c1c; */
+    color: #fff;
+    padding: 140px 0;
+    /* background: rgba(0, 0, 0, 0) url() no-repeat scroll center center/cover; */
+    /* background: linear-gradient(rgba(0, 0, 0, 0.32),rgba(0,0,0,.767)),url(https://creativelayers.net/themes/homez-html/images/home/home-8.jpg) no-repeat center center fixed; */
+    /* background-position: center bottom; */
+    
+    background-image: url(https://exprealty.com/wp-content/uploads/First-Time-Home-Buyers-Step-by-Step-Guide.jpg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    z-index: 0;
+}
+.intro::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(162, 75, 75, 0.84) 19.27%, rgba(217, 217, 217, 0) 100%);
+    z-index: -1;
+}
+
+/* first */
+.first-section{
+    padding: 100px 0;
+}
+
+
+/* second */
+
+
+.second-section hr{
+    border: 1px solid red !important
+}
+
+
+/* second */
+
+.third-section{
+    background-color: #a81c1c;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.third-section .anchor-para a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffdd05!important;
+}
+.third-section .anchor-para  a:hover{
+    text-decoration: underline;
+}

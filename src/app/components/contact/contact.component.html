@@ -1,0 +1,309 @@
+<app-navbar></app-navbar>
+
+
+
+<section class="first-section">
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-lg-10 col-12 text-center">
+        <h4 style="color: #197d7b;">CALL <a href="tel:18889869883" style="text-decoration: underline; font-weight: 800; color: #197d7b;">  <span
+          class="fw-bold">1 (888)
+          986-9883</span></a></h4>
+        <h1 class="mb-4 fw-bold">Ready for a free consultation?</h1>
+        <p>Selling your house fast for cash starts here. When you fill out the form to request your free consultation, a local property specialist that’s familiar with your area will contact you. With a 95%* customer satisfaction rate, We Buy Ugly Houses® is dedicated to making you another happy seller.</p>
+       </div>
+    </div>
+  </div>
+</section>
+
+<section style="background-color: #f8f8f8;" class="py-5">
+  <div class="container">
+    <div class="row justify-content-center align-items-center mt-4">
+      <div class="col-lg-10 col-md-12 col-12">
+
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" id="progress-bar"
+            attr.aria-valuenow="{{this.progressWidth}}" aria-valuemin="0" aria-valuemax="100">{{this.progressWidth}}%
+          </div>
+        </div>
+        <div class="mt-3">
+          <p class="fs-5 text-muted">Step {{step}} of 2</p>
+
+        </div>
+
+        <div class="form-1" [ngStyle]="{display:isVisibleForm1?'block':'none'}">
+          <form #contactForm="ngForm"  class="needs-validation" novalidate="">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <h3>1. Add Property Address</h3>
+                <div class="row mt-4">
+                  <div class="col-lg-12">
+                    <div class="form-floating mb-4">
+                      <input type="text" class="form-control" autocomplete="new-password" ngx-google-places-autocomplete
+                        [options]="options" (onAddressChange)="handleAddressChange($event)" id="floatingInput"
+                        [(ngModel)]="formData.sessionFullStreetAddress" placeholder="Property address"
+                        name="streetAddress" #streetAddressRef="ngModel" ngModel required="" #addressInput>
+                      <label for="floatingInput">Property address*</label>
+                      <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                        <img src="../../../assets/images/powered-by-google.png" width="100" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-floating mb-4">
+                      <input type="text" class="form-control" autocomplete="new-password" id="floatingInput"
+                        [(ngModel)]="formData.firstName" placeholder="First Name" name="firstName"
+                        #firstNameRef="ngModel" ngModel required="" #firstNameInput>
+                      <label for="floatingInput">First name*</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6  col-md-6 col-12">
+                    <div class="form-floating mb-4">
+                      <input type="text" class="form-control" autocomplete="new-password" id="floatingInput"
+                        [(ngModel)]="formData.lastName" placeholder="Last Name" name="lastName" #lastNameRef="ngModel"
+                        ngModel required="" #lastNameInput>
+                      <label for="floatingInput">Last name*</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12 ">
+                <h3>2. Add Contact Info</h3>
+                <div class="row mt-4">
+
+                  <div class="col-lg-12">
+                    <div class="form-floating mb-lg-5 mb-md-5 mb-4">
+                      <input type="tel" class="form-control" id="floatingInput" autocomplete="new-password"
+                        [(ngModel)]="formData.phoneNumber" placeholder="Phone Number" [inputMask]="phoneNumberInputMask"
+                        name="phoneNumber" #phoneNumberRef="ngModel" ngModel required="" #phoneInput>
+                      <label for="floatingInput">Phone number*</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-floating mt-lg-2 mt-md-2 mb-4">
+                      <input type="email" class="form-control" id="floatingInput" autocomplete="new-password"
+                        [(ngModel)]="formData.email" placeholder="Email" name="email" #emailRef="ngModel" ngModel
+                        required="" #emailInput>
+                      <label for="floatingInput">Email*</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="mt-4 form-check" id="confirm-msg">
+          <input type="checkbox" class="form-check-input" name="confirm" [(ngModel)]="formData.confirm" required>
+          <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and provide my consent
+            for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the phone number provided
+            above via text (SMS) or calling using automated dialing technology to schedule an appointment and for
+            marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent not required to
+            purchase services. Message and data rates may apply. Message frequency varies by account. To opt-out at any
+            time reply STOP to the message you receive. For more information, please review our <a href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy" target="_blank">Privacy
+              Policy</a>.
+          </label>
+        
+        </div> -->
+            <div class="mt-4">
+              <button type="submit" class="btn btn-dark px-5 py-3" (click)="showNext(contactForm)"
+                [disabled]="!contactForm.form.valid">Next</button>
+              <!-- <button type="submit" class="btn btn-danger px-5 py-3" id="button-vary1"
+          [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+            </div>
+
+
+          </form>
+
+        </div>
+
+        <div [ngStyle]="{display:isVisibleForm2?'block':'none'}">
+
+          <form #form2="ngForm" (ngSubmit)="form2Data(form2)" class="needs-validation" novalidate="">
+
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-12">
+                <p>Ok so, how long have you owned the property - {{this.formData.sessionFullStreetAddress}}?</p>
+                <div class="row mt-4">
+                  <div class="col-lg-12">
+                    <div class="form-floating mb-4">
+                      <input type="number" min="0" max="100" class="form-control" id="floatingInput"
+                        [(ngModel)]="formData2.ownedProperty" name="ownedProperty" #ownedPropertyRef="ngModel" ngModel
+                        required="" autocomplete="new-password" #ownedPropertyInput>
+                      <label for="floatingInput">(in yrs)</label>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <p>What are the details of the property, including its type, size, number of bedrooms, and number of
+                bathrooms?</p>
+              <div class="col-lg-6 col-12">
+                <div class="form-floating mb-4">
+                  <select class="form-select " name="serviceReq" id="floatingSelect"
+                    aria-label="Floating label select example" required="" (change)="selectChangeHandler1($event)">
+                    <option *ngFor="let opt of this.propertyType" [value]="opt.label" [selected]="opt.status == true">
+                      {{opt.label}}</option>
+                  </select>
+                  <label for="floatingSelect">Type of property</label>
+                </div>
+
+              </div>
+              <div class="col-lg-6">
+                <div class="form-floating mb-4">
+                  <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData2.sizeProperty"
+                    name="sizeProperty" #sizeProperty="ngModel" autocomplete="new-password" ngModel required=""
+                    #sizePropertyInput [inputMask]="numericDecimalInputMask" placeholder="0">
+                  <label for="floatingInput">Size of the property (sq ft)</label>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-floating mb-4">
+                  <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData2.numberOfBedroom"
+                    name="numberOfBedroom" #numberOfBedroomRef="ngModel" autocomplete="new-password" ngModel required=""
+                    #numberOfBedroomInput [inputMask]="numericInputMask" placeholder="0">
+                  <label for="floatingInput">Number of bedrooms</label>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-floating mb-4">
+                  <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData2.numberOfBathroom"
+                    name="numberOfBathroom" #numberOfBathroomRef="ngModel" autocomplete="new-password" ngModel
+                    required="" #numberOfBathroomInput [inputMask]="numericInputMask" placeholder="0">
+                  <label for="floatingInput">Number of bathroom</label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <p>Can you tell me about the current condition of the property? Any recent upgrades or improvements
+                  you'd like to mention?</p>
+                <div class="form-floating mb-4">
+                  <textarea class="form-control" [(ngModel)]="formData2.currentCondition" name="currentCondition"
+                    #currentConditionRef="ngModel" autocomplete="new-password" ngModel required="" style="height: 100px"
+                    #currentConditionInput></textarea>
+
+                  <label for="floatingTextarea">Current Condition and Upgrades</label>
+                </div>
+
+              </div>
+              <p>What's your desired selling price and timeline for the sale?</p>
+             
+              <div class="col-lg-6 col-12">
+                <div class="form-floating mb-4">
+                  <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData2.desiredSellingPrice"
+                    name="desiredSellingPrice" #desiredSellingPriceRef="ngModel" autocomplete="new-password" ngModel
+                    required="" #desiredSellingPriceInput [inputMask]="currencyInputMask" placeholder="0">
+                  <label for="floatingInput">Desired selling price (C$)</label>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-12">
+
+                <div class="form-floating mb-4">
+                  <select class="form-select " name="serviceReq" id="floatingSelect"
+                    aria-label="Floating label select example" required="" (change)="selectChangeHandler2($event)">
+                    <option *ngFor="let opt of this.sellingTimeline" [value]="opt.label"
+                      [selected]="opt.status == true">
+                      {{opt.label}}</option>
+                  </select>
+                  <label for="floatingSelect">Preferred timeline for selling</label>
+                </div>
+              </div>
+              <div class="col-lg-12">
+
+
+
+
+                <div class="col-lg-12">
+                  <p>What's the reason behind selling the property?</p>
+                  <div class="form-floating mb-4">
+                    <textarea class="form-control" [(ngModel)]="formData2.motiveSellProperty" name="motiveSellProperty"
+                      #motiveSellPropertyRef="ngModel" autocomplete="new-password" ngModel required=""
+                      style="height: 100px" #motiveSellPropertyInput></textarea>
+                    <label for="floatingTextarea">Reason for Selling</label>
+
+
+
+                  </div>
+                </div>
+
+                <div class="mt-4 form-check" id="confirm-msg">
+          <input type="checkbox" class="form-check-input" name="confirm" [(ngModel)]="formData.confirm" required>
+          <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and provide my consent
+            for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the phone number provided
+            above via text (SMS) or calling using automated dialing technology to schedule an appointment and for
+            marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent not required to
+            purchase services. Message and data rates may apply. Message frequency varies by account. To opt-out at any
+            time reply STOP to the message you receive. For more information, please review our <a href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy" target="_blank">Privacy
+              Policy</a>.
+          </label>
+          </div>
+              </div>
+            </div>
+            
+          </form>
+          <hr class="my-4">
+          <div>
+            <button type="button" class="btn btn-dark px-5 py-3 me-2" (click)="showPre()">Previous</button>
+
+            <button type="submit" class="btn btn-danger px-5 py-3" (click)="form2Data(form2)" [disabled]="!form2.form.valid">Submit</button>
+
+          </div>
+        </div>
+        <!-- <form #myForm="ngForm" (ngSubmit)="submitForm(addressInput.value)">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-6 col-12 mt-4">
+              <label for="address">Address </label>
+              <input type="text" class="form-control" id="address" placeholder="Property Address" name="address" ngModel required  ngx-google-places-autocomplete [options]="options"
+              (onAddressChange)="handleAddressChange($event)"  #addressInput>
+      
+             </div>
+             <div class="col-lg-6 col-12 mt-4">
+              <label for="firstName">First Name </label>
+              <input type="text" class="form-control" id="firstName" name="firstName" ngModel required>
+            
+             </div>
+             <div class="col-lg-6 col-12 mt-4">
+              <label for="lastName">Last Name </label>
+              <input type="text" class="form-control" id="lastName" name="lastName" ngModel required>
+            
+             </div>
+             <div class="col-lg-6 col-12 mt-4">
+                  
+              <label for="phone">Phone </label>
+              <input type="tel" class="form-control" id="phone" name="phone" ngModel pattern="[0-9]{10}" [inputMask]="phoneNumberInputMask"  required>
+            
+             </div>
+             <div class="col-lg-6 col-12 mt-4">
+              
+              <label for="email">Email </label>
+              <input type="email" class="form-control" id="email" name="email" ngModel required>
+            
+             </div>  
+          </div>
+       
+        </div>
+      
+      
+        <button class="btn btn-danger mt-4" type="submit" >Submit</button>
+      </form>
+       -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="small-intro">
+  <div class="container">
+      <div class="row justify-content-center align-items-center">
+          <div class="col-lg-2">
+              <img src="../../../assets/logo_transparent.png" width="100%" alt="">
+          </div>
+          <div class="col-lg-10">
+              <h5>Leading the industry since the day we invented it.</h5>
+              <p>There’s just no faster or easier way to sell your house than selling to We Buy Ugly Houses®. We pay cash for houses “as is”—you don’t spend money and time on painting or cleaning, and you don’t have to wait while your house sits on the market. We can give you our fair cash offer at our first meeting and generally close in as fast as three weeks. Unlike other cash buyers, we don't charge commissions and we pay typical closing costs.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

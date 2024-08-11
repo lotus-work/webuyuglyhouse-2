@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+
+<section class="common-header">
+  <div class="container">
+    <div class="row vh-50 d-flex justify-content-left align-items-center ">
+      <div class="col-lg-10">
+        <h1 class="fw-bold">Frequently Asked Questions</h1>
+        <h4 class="fw-bold">We’ve got answers to your questions about getting you cash fast for your house.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="first-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-12">
+        <h4 class="pb-4">You've got questions and we've got answers.</h4>
+
+        <p>Every time someone is selling a house, it’s a unique and personal transaction. We’ve helped more
+          homeowners—more than any other buyer—get the solution that fits their specific needs. Our property specialists
+          are standing by ready to help you with any questions you may have about your unique situation—no obligation,
+          no cost—just give us a call. We’re happy to just talk about your situation and offer any guidance we can.</p>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="accordion accordion-flush" id="accordionFlushExample"
+          *ngIf="this.faqData.length!='' ; else elseBlock">
+
+          <div class="accordion-item my-3  border" *ngFor="let item of faqData; let i = index">
+            <h2 class="accordion-header ">
+              <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                [attr.data-bs-target]="'#flush-collapse' + i" [attr.aria-controls]="'flush-collapse' + i">
+                {{i+1}}. {{ item.question }}
+              </button>
+            </h2>
+            <div [id]="'flush-collapse' + i" class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" [innerHTML]="item.answer"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <ng-template #elseBlock>
+          <div class="alert alert-warning" role="alert">
+            No response / No FAQs found
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center align-items-center g-3 my-4 quotes responsive-text">
+      <div class="col-lg-2">
+        <img src="../../../assets/faqs/quote.svg" width="90%" alt="">
+      </div>
+      <div class="col-lg-10 ">
+        <h2>Better than we could have hoped for! Sal and the team [We Buy Ugly Houses franchisee] were all understanding
+          to our needs, and made the process easier and less stressful.</h2>
+
+        <div class="row my-3">
+          <div class="col">
+            <img src="../../../assets/faqs/star-five.webp" alt="">
+            <img src="../../../assets/faqs/WBUH-verified-seller-badge.svg" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+
+            <h5>Benjamin S. (Blackstone, Virginia) • 1/21/2022</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="second-section">
+  <div class="container">
+    <div class="row justify-content-center align-items-center text-center">
+      <div class="col-lg-10 col-12">
+        <p class="fs-4 fw-bold">Still have questions?</p>
+        <p class="fs-5">Your local We Buy Ugly Houses® property specialist will be happy to answer all of them.</p>
+        <p class="fs-5">Just fill out the <a href="contact-us" class="highlight-hyerlink">Contact Us</a> form and we
+          will reach out to you or call <a href="tel:18889869883" class="highlight-hyerlink">888-986-9883</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+
+<app-footer></app-footer>

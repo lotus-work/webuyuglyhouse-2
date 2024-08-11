@@ -1,0 +1,159 @@
+.first-section {
+    padding: 100px 0;
+}
+
+.second-section {
+    padding: 100px 0;
+}
+
+.fifth-section {
+     background: #e72113;
+ color: #fff; 
+}
+
+.pac-container {
+    z-index: 1060 !important;
+}
+.fifth-section .form-floating {
+    color: #000 !important;
+}
+
+.fifth-section  a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffdd05!important;
+}
+.fifth-section a:hover{
+    text-decoration: underline;
+}
+
+
+
+hr{
+    border: 2px solid  gray;
+}
+
+.summary-review{
+    background-color: #bee4e0;
+    padding: 10px 0;
+}
+
+.summary-row.overview {
+    background-color: #bee4e0;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    font-family: IBM Plex Sans,sans-serif;
+    line-height: .9
+}
+
+.summary-row.overview strong {
+    color: #197d7b;
+    font-size: .875rem
+}
+
+.summary-row.overview .grey {
+    color: #514d4d;
+    font-weight: 600
+}
+
+.summary-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1px .5rem;
+    border-radius: 6px
+}
+
+.summary-row.total {
+    margin-bottom: .5rem
+}
+
+.summary-row .rating {
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+    margin-right: 8px
+}
+
+.summary-row .bar {
+    -ms-flex: 1;
+    flex: 1;
+    margin: 3px 7px 3px 0;
+    border-radius: .5rem;
+    background-color: #ececec
+}
+
+.summary-row .bar .inner {
+    background-color: #19a39a
+}
+
+.summary-row .bar,.summary-row .bar .inner {
+    height: 1rem;
+    border-radius: .5rem
+}
+
+.summary-row .percentage {
+    -ms-flex: 0 0 1.75rem;
+    flex: 0 0 1.75rem;
+    text-align: right;
+    font-size: .875rem;
+    font-weight: 700;
+    color: #19a39a
+}
+
+.summary-row.filtered {
+    background-color: #8fd7d4
+}
+
+.summary-row.filtered .bar {
+    background-color: #fff
+}
+
+.summary-row.filtered .bar .inner {
+    background-color: #ee3e33
+}
+
+.summary-row.filtered .percentage {
+    color: #000
+}
+
+.rating-period {
+    font-size: .625rem;
+    font-family: IBM Plex Sans,sans-serif
+}
+
+@media print,screen and (min-width: 48em) {
+   
+    .summary-row.overview strong {
+        font-size: 1.25rem
+    }
+
+    .grey {
+        font-size: 1rem
+    }
+
+    .summary-row {
+        font-size: 1.25rem
+    }
+
+    .summary-row .rating {
+        -ms-flex-preferred-size: 170px;
+        flex-basis: 170px;
+        margin-right: 28px
+    }
+
+    .summary-row .rating img {
+        width: 100%
+    }
+
+    .summary-row .percentage {
+        -ms-flex-preferred-size: 2.5rem;
+        flex-basis: 2.5rem;
+        font-size: 1.25rem
+    }
+
+    .rating-period {
+        font-size: .825rem
+    }
+}
+

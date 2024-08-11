@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="123" height="22" viewBox="0 0 123 22">
+  <g transform="translate(-99 -189)">
+    <g transform="translate(99 189)" fill="#f1fafa" stroke="#f1fafa">
+      <rect width="123" height="22" rx="11"/>
+    </g>
+    <text transform="translate(127 205)" fill="#168d85" font-size="14" font-family="Lato-Bold, Lato" font-weight="700">
+      <tspan x="0" y="0">Verified Seller</tspan>
+    </text>
+    <g transform="translate(1467 -111)">
+      <circle cx="7" cy="7" r="7" transform="translate(-1360 304)" fill="#19a39a"/>
+      <g transform="translate(-1356.784 308.592)">
+        <line x2="2.752" y2="2.752" transform="translate(0 2.064)" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+        <line x1="4.816" y2="4.816" transform="translate(2.752)" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

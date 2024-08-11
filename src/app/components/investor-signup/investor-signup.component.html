@@ -1,0 +1,311 @@
+<app-navbar></app-navbar>
+<section class="intro">
+    <div class="container">
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-lg-8 col-md-8 col-12 ">
+          <h1>Investor Sign Up</h1>
+          <h3>Calling All Cash Buyers, Fix and Flippers and Real Estate Investors!</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="first-section">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-11 col-md-12 col-12 back-red p-3">
+
+            <h4 class="pb-4">Thank you for your interest in our off-market property deals. Give us your information and we’ll start sending you properties in the areas you’re interested in.</h4>
+
+            <form  #investorForm="ngForm"
+            (ngSubmit)="investorSignupFormData(investorForm)" class="needs-validation"
+            novalidate="">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-12">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-6">
+                    <!-- <div class="form-floating mb-4">
+                      <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData.firstName"  placeholder="First Name" name="firstName" #firstNameRef="ngModel"  autocomplete="new-password"  ngModel required="" #firstNameInput>
+                      <label for="floatingInput">First name*</label>
+                    </div> -->
+                    <div class="form-group mb-4">
+                      <label for="exampleInputEmail1">First Name*</label>
+                      <input type="text" class="form-control" [(ngModel)]="formData.firstName"  name="firstName" #firstNameRef="ngModel"  autocomplete="new-password"  ngModel required="" #firstNameInput>
+                     </div>
+                  </div>
+                  <div class="col-lg-6  col-md-6 col-6">
+                    <!-- <div class="form-floating mb-4">
+                      <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData.lastName" placeholder="Last Name" name="lastName" #lastNameRef="ngModel"  autocomplete="new-password"  ngModel required="" #lastNameInput>
+                      <label for="floatingInput">Last name*</label>
+                    </div> -->
+                    <div class="form-group mb-4">
+                      <label for="exampleInputEmail1">Last Name*</label>
+                      <input type="text" class="form-control"  [(ngModel)]="formData.lastName" name="lastName" #lastNameRef="ngModel"  autocomplete="new-password"  ngModel required="" #lastNameInput>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-12 ">
+               <div class="row">
+    
+                  <div class="col-lg-6  col-md-6 col-12">
+                    <!-- <div class="form-floating mb-4">
+                      <input type="tel" class="form-control" id="floatingInput" [(ngModel)]="formData.phoneNumber"  placeholder="Phone Number" [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"  autocomplete="new-password"  ngModel required="" #phoneInput>
+                      <label for="floatingInput">Phone number*</label>
+                    </div> -->
+                    <div class="form-group mb-4">
+                      <label for="exampleInputEmail1">Phone Number*</label>
+                      <input type="tel" class="form-control" [(ngModel)]="formData.phoneNumber"  [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"  autocomplete="new-password"  ngModel required="" #phoneInput>
+                     </div>
+                  </div>
+                  <div class="col-lg-6  col-md-6 col-12">
+                    <!-- <div class="form-floating mb-4">
+                      <input type="email" class="form-control" id="floatingInput" [(ngModel)]="formData.email"  placeholder="Email" name="email"  #emailRef="ngModel"  autocomplete="new-password"   ngModel required="" #emailInput>
+                      <label for="floatingInput">Email*</label>
+                    </div> -->
+                    <div class="form-group mb-4">
+                      <label for="exampleInputEmail1">Email*</label>
+                      <input type="email" class="form-control" [(ngModel)]="formData.email" name="email"  #emailRef="ngModel"  autocomplete="new-password"   ngModel required="" #emailInput>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="form-floating mb-4">
+                    <p>Are you looking for buy and hold or fix and flip deals?*</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault1"  name="buyAndHold" value="Buy and Hold" ngModel>
+                        <label class="form-check-label" for="flexCheckDefault1">
+                            Buy and Hold
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="fixAndFlip" value="Fix and Flip" ngModel id="flexCheckChecked2">
+                        <label class="form-check-label" for="flexCheckChecked2">
+                            Fix and Flip
+                        </label>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-6 col-12">
+                <div class="form-floating mb-4">
+                    <p>Do you purchase properties with liquid funds or do you borrow capital?*</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault3"  name="liquid" value="liquid" ngModel>
+                       
+                        <label class="form-check-label" for="flexCheckDefault3">
+                            Liquid
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault4"  name="borrowCapital" value="borrowCapital" ngModel>
+                       
+                        <label class="form-check-label" for="flexCheckChecked4">
+                            Borrow Capital
+                        </label>
+                      </div>
+                  </div>
+              </div>
+
+
+              <div class="col-lg-6 col-12">
+                <!-- <div class="form-floating mb-4">
+                  
+                    <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData.citiesLikeToBuy" placeholder="What cities do you like to buy in?*" name="citiesLikeToBuy"  #citiesLikeToBuyRef="ngModel"   autocomplete="new-password"  ngModel required="" #citiesLikeToBuyInput>
+                    <label for="floatingInput">What cities do you like to buy in?*</label>
+                  </div> -->
+
+                  <div class="form-group mb-4">
+                    <label for="exampleFormControlInput1">What cities do you like to buy in?*</label>
+                    <input type="text" class="form-control"  [(ngModel)]="formData.citiesLikeToBuy" name="citiesLikeToBuy"  #citiesLikeToBuyRef="ngModel"   autocomplete="new-password"  ngModel required="" #citiesLikeToBuyInput>
+                    <!-- <small id="emailHelp" class="form-text">Example: Detached homes, 2 car garage only etc.</small> -->
+
+                  </div>
+              </div>
+
+              <div class="col-lg-6 col-12">
+                <!-- <div class="form-floating mb-4">
+                    <select class="form-select " name="serviceReq"
+                        id="floatingSelect"
+                        aria-label="Floating label select example" required=""
+                        (change)="selectChangeHandler1($event)">
+                        <option *ngFor="let opt of this.timeToCloseOnDeal"
+                            [value]="opt.label" [selected]="opt.status == true">
+                            {{opt.label}}</option>
+                    </select>
+                    <label for="floatingSelect">How much time do you require to close on deals?*</label>
+                </div> -->
+                <div class="form-group mb-4">
+                  <label for="exampleFormControlSelect1">How much time do you require to close on deals?*</label>
+                  <select class="form-control" name="serviceReq"
+                  id="floatingSelect"
+                  aria-label="Floating label select example" required=""
+                  (change)="selectChangeHandler1($event)">
+                    <option *ngFor="let opt of this.timeToCloseOnDeal"
+                    [value]="opt.label" [selected]="opt.status == true">
+                    {{opt.label}}</option>
+                  </select>
+                </div>
+            </div>
+
+            
+              <div class="col-lg-6 col-12">
+                <div class="form-floating mb-4">
+                 
+                    <!-- <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData.propertyCriteria" placeholder="What types of property criteria do you require?*" name="propertyCriteria" #propertyCriteriaRef="ngModel"   autocomplete="new-password"  ngModel required="" #propertyCriteriaInput>
+                    <label for="floatingInput">What types of property criteria do you require?*</label>
+                    <small style="font-size: 12px;">Example: Detached homes, 2 car garage only etc.</small> -->
+
+                    <div class="form-group mb-4">
+                      <label for="exampleFormControlInput1">What types of property criteria do you require?*</label>
+                      <input type="text" class="form-control" [(ngModel)]="formData.propertyCriteria" name="propertyCriteria" #propertyCriteriaRef="ngModel"   autocomplete="new-password"  ngModel required="" #propertyCriteriaInput>
+                      <small id="emailHelp" class="form-text">Example: Detached homes, 2 car garage only etc.</small>
+  
+                    </div>
+                  </div>
+               </div>
+
+              <div class="col-lg-6 col-12">
+                <!-- <div class="form-floating mb-4">
+             
+                    <input type="text" class="form-control" id="floatingInput"  [(ngModel)]="formData.returnLokking" placeholder="What type of return are you typically looking? (What is your buy formula?)*" name="returnLokking" #returnLokkingRef="ngModel"   autocomplete="new-password"  ngModel required="" #returnLokkingInput>
+                    <label for="floatingInput">What type of return are you typically looking? (What is your buy formula?)*</label>
+                    <small style="font-size: 12px;">Example: 85% ARV - Repairs = Purchase price</small>
+                  </div> -->
+
+                  <div class="form-group mb-4">
+                    <label for="exampleFormControlInput1">What type of return are you typically looking? (What is your buy formula?)*</label>
+                    <input type="text" class="form-control" [(ngModel)]="formData.returnLokking" name="returnLokking" #returnLokkingRef="ngModel"   autocomplete="new-password"  ngModel required="" #returnLokkingInput>
+                    <small id="emailHelp" class="form-text">Example: 85% ARV - Repairs = Purchase price</small>
+
+                  </div>
+                </div>
+
+       
+
+            <div class="col-lg-6 col-12">
+                <!-- <div class="form-floating mb-4">
+                  <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData.handlePropertiesPerMonth" name="handlePropertiesPerMonth" #handlePropertiesPerMonthRef="ngModel"  autocomplete="new-password" ngModel required="" #handlePropertiesPerMonthInput>
+                 
+                  <label for="floatingInput">How many properties per month can you handle?*</label>
+                  <small style="font-size: 12px;">Please enter a number from 0 to 100.</small>
+                </div> -->
+
+                <div class="form-group mb-4">
+                  <label for="exampleFormControlInput1">How many properties per month can you handle?*</label>
+                  <input type="text" class="form-control" [(ngModel)]="formData.handlePropertiesPerMonth" name="handlePropertiesPerMonth" #handlePropertiesPerMonthRef="ngModel"  autocomplete="new-password" ngModel required="" #handlePropertiesPerMonthInput>
+                  <small id="emailHelp" class="form-text">Please enter a number from 0 to 100.</small>
+
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-12">
+                <!-- <div class="form-floating mb-4">
+                    <select class="form-select " name="serviceReq"
+                        id="floatingSelect"
+                        aria-label="Floating label select example" required=""
+                        (change)="selectChangeHandler2($event)">
+                        <option *ngFor="let opt of this.closeOnNextDeal"
+                            [value]="opt.label" [selected]="opt.status == true">
+                            {{opt.label}}</option>
+                    </select>
+                    <label for="floatingSelect">When are you looking to close on your next deal?*</label>
+                </div> -->
+
+                <div class="form-group mb-4">
+                  <label for="exampleFormControlSelect1">When are you looking to close on your next deal?*</label>
+                  <select class="form-control"  name="serviceReq"
+                  id="floatingSelect"
+                  aria-label="Floating label select example" required=""
+                  (change)="selectChangeHandler2($event)">
+                    <option *ngFor="let opt of this.closeOnNextDeal"
+                            [value]="opt.label" [selected]="opt.status == true">
+                            {{opt.label}}</option>
+                  </select>
+                </div>
+
+            </div>
+
+            <div class="col-lg-12 col-12">
+                <div class="form-floating mb-4">
+                    <p>What other services can I help you with?*</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="flexCheckDefault5"  name="findQualifiedContractor" value="findQualifiedContractor" ngModel>
+                       
+                        <label class="form-check-label" for="flexCheckDefault5">
+                          Find you a qualified contractor
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault6"  name="introduceGreatLawyer" value="introduceGreatLawyer" ngModel>
+                        <label class="form-check-label" for="flexCheckChecked6">
+                          Introduce you to a great Real Estate Lawyer
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault7"  name="introduceGreatAgent" value="introduceGreatAgent" ngModel>
+                        <label class="form-check-label" for="flexCheckChecked7">
+                          Introduce you to a great Real Estate agent
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flexCheckDefault8"  name="introduceMortageSpecialist" value="introduceMortageSpecialist" ngModel>
+                        <label class="form-check-label" for="flexCheckChecked8">
+                          Introduce you to a mortgage specialist
+                        </label>
+                      </div>
+                  </div>
+              </div>
+
+
+            </div>
+    
+        
+            
+            <div class="mt-4">
+            <button type="submit" class="btn btn-danger px-5 py-3" id="button-vary1"
+              [disabled]="!investorForm.form.valid">Submit Feedback</button>
+            </div>
+           
+              
+          </form>
+
+          
+          <!-- <form #checkboxForm="ngForm" (ngSubmit)="onSubmit(checkboxForm.value)">
+            <div>
+              <h3>1) Are you looking for buy and hold or fix and flip deals?</h3>
+              <label>
+                <input type="checkbox" name="buyAndHold" value="Buy and Hold" ngModel> Buy and Hold
+              </label>
+              <label>
+                <input type="checkbox" name="fixAndFlip" value="Fix and Flip" ngModel> Fix and Flip
+              </label>
+            </div>
+          
+            <div>
+              <h3>2) Do you purchase properties with liquid funds or do you borrow capital?</h3>
+              <label>
+                <input type="checkbox" name="liquidFunds" value="Liquid Funds" ngModel> Liquid Funds
+              </label>
+              <label>
+                <input type="checkbox" name="borrowCapital" value="Borrow Capital" ngModel> Borrow Capital
+              </label>
+            </div>
+          
+            <button type="submit">Submit</button>
+          </form>
+          
+          <h3>Selected Values:</h3>
+          <div *ngIf="submitted">
+           <p>{{buyholdOrfixdeals}}</p>
+            <p>Liquid Funds: {{ checkboxForm.value.liquidFunds }}</p>
+            <p>Borrow Capital: {{ checkboxForm.value.borrowCapital }}</p>
+          </div> -->
+        
+        </div>
+      </div>
+    </div>
+  </section>
+<app-footer></app-footer>

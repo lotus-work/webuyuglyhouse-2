@@ -1,0 +1,63 @@
+.footer {
+    padding: 80px 0 100px 0;
+    background-color: #514d4d;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem
+}
+
+.nav a {
+    display: block;
+    padding: 0.2rem 0.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+.nav a:hover{
+    text-decoration: underline;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.bi {
+    padding: 8px 12px;
+   font-size: 1.4em;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 50%;
+  }
+  
+  .bi:hover {
+      opacity: 0.7;
+  }
+  
+.bi-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .bi-twitter-x {
+    background: #ffffff;
+    color: #000;
+  }
+  
+.bi-instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    color: white;
+  }
+  

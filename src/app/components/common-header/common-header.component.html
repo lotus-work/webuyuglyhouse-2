@@ -1,0 +1,57 @@
+<section class="common-header">
+  <div class="container overlay-text">
+    <div data-scrollax-parent="true" class="row d-flex justify-content-center align-items-center">
+      <div class="col-lg-10 col-md-12 col-sm-12 col-12 text-center py-5">
+        <h1>{{heading}}</h1>
+        <h3 class="subheading mb-5">{{subheading}}</h3>
+
+        <!-- <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" placeholder="Enter you address" aria-label="Enter you address" aria-describedby="button-addon2">
+            <button class="btn btn-warning" type="button" id="button-addon2">Take the first step</button>
+          
+          </div> -->
+
+        <!-- <div>
+            <form class="address-search" method="post" action="/contact/">
+                <div class="input-wrapper">
+                    <input id="lead-address" type="text" placeholder="Enter your street address" data-uw-rm-form="nfx" class="pac-target-input" autocomplete="off">
+                    <button id="lead-cash-offer-btn" class="vwo_loaded vwo_loaded_51" type="submit" style="transition: none 0s ease 0s !important;" data-uw-rm-form="submit">Take The First Step</button>
+                </div>
+            </form>
+          </div> -->
+
+        <div class="row justify-content-center align-items-center">
+        <div class="col-lg-12">
+            <div class="row bg-white py-3 mx-1 border rounded-3">
+                <div class="col-lg-2 col-md-2 col-12 m-auto text-center ">
+                    <img src="../../../assets/images/home/common-header/icons8-location-48.png" width="30" alt="">
+                    
+                    <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                      <img src="../../../assets/images/powered-by-google.png" width="100" alt="" >
+                    </div>
+                   
+                  </div>
+                  <div class="col">
+                    <input  ngx-google-places-autocomplete [options]="options"
+                    (onAddressChange)="handleAddressChange($event)" name="address" type="text" class="form-control" placeholder="Enter your property address" aria-label="Enter you address"
+                      aria-describedby="button-addon2" #addressInput #inputField>
+              
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-12 pt-lg-0 pt-md-0 pt-3">
+                    <!-- <a href="contact-us" class="btn btn-danger col-12 py-3"  id="button-vary1" (click)="saveAddress()" [disabled]="!addressInput.value">Take the first step</a> -->
+                    <a href="contact-us" class="btn btn-danger col-12 py-3" id="button-vary1" (click)="saveAddress()" [ngClass]="{'disabled-link': !addressInput.value}">Take the first step</a>
+
+                    <!-- <button class="btn btn-danger col-12 py-3" type="button" id="button-vary1" (click)="saveAddress()" [disabled]="!addressInput.value">Take the first step</button> -->
+                  </div>
+        
+            </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+

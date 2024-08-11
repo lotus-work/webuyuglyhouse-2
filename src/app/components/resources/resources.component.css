@@ -1,0 +1,87 @@
+.how-it-works {
+    padding: 60px 0;
+}
+
+.how-it-works h4, .fs-5 {
+    color: #19a39a;
+    font-weight: 600;
+    padding: 0 0 10px 0;
+}
+
+.let-get-you-moving {
+    background: #197d7b;
+    padding: 80px 0;
+}
+
+.let-get-you-moving p {
+    font-weight: 600;
+    color: #fff;
+}
+
+.common-header {
+    background-image: linear-gradient(rgba(15, 13, 13, 0.29), rgba(16, 16, 16, 0.707)), url('../../../assets/resourses/seller-resources/1.jpg');
+    background-position: center center;
+}
+
+.vh-50 {
+    height: 50vh;
+}
+
+.common-header h1,
+h4 {
+    color: white;
+}
+
+
+.fifth-section {
+    background: #e72113;
+    color: #fff;
+}
+
+.fifth-section h4{
+    color: #fff;
+}
+.fifth-section .form-floating {
+    color: #000 !important;
+}
+
+.fifth-section a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffdd05 !important;
+}
+
+.fifth-section a:hover {
+    text-decoration: underline;
+}
+
+
+.statement-highlight.module {
+    margin: 0;
+    text-align: center
+}
+
+.statement-highlight.module .statement-highlight-inner {
+    margin: 2rem 0;
+    padding-top: 1rem;
+    border: 1px solid #197d7b;
+    border-width: 1px 0
+}
+
+.statement-highlight.module .statement-highlight-inner>:last-child,.statement-highlight.module p {
+    margin: 0 0 1rem
+}
+
+.statement-highlight.module div,.statement-highlight.module p,.statement-highlight.module span {
+    color: #197d7b;
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.6875rem
+}
+
+@media screen and (min-width: 80em) {
+    .statement-highlight.module div,.statement-highlight.module p,.statement-highlight.module span {
+        font-size:1.825rem;
+        line-height: 2.4375rem
+    }
+}

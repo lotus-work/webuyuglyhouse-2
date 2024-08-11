@@ -1,0 +1,73 @@
+<app-navbar></app-navbar>
+
+<section class="first-section" *ngIf="isFound == 'true'">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 d-none d-lg-block">
+
+              <div class="img-container">
+                  <img src={{this.onSearchCityFound[0].coverPhoto}}  class="card-img-top" width="100%" alt="..." >
+                <div class="overlay">
+                  <div class="centered">
+                    <h4>{{this.onSearchCityFound[0].name}}</h4>
+                  </div>
+                </div>
+              </div>
+
+             </div>
+            <div class="col-lg-8 col-md-12 col-12">
+                <h2 class="pb-4">Sell Your House Fast in {{this.cityParams}}, Ontario, CA</h2>
+
+                <p>It doesn't matter what type of ugly home you have, IBuyUglyHouses® would like to make a no obligation cash offer to purchase your home for cash. Whether your home is cosmetically ugly, has ugly structural or repair issues, or has you captive in an ugly situation, you can count on IBuyUglyHouses to come to your rescue with a fast and fair cash offer. We’re buying homes in {{this.cityParams}}, Ontario and surrounding areas. </p>
+                <p>Contact us today <a href="tel:18889869883">1 (888) 986-9883</a> .</p>
+             <p>People say "I need to sell my house" for any number of reasons, including:</p>
+             <ul>
+                <li><p>Structural issues</p></li>
+                <li><p>Facing foreclosure</p></li>
+                <li><p>Relocation or job transfer</p></li>
+                <li><p>Undesirable neighborhoods</p></li>
+                <li><p>Divorce</p></li>
+                <li><p>Need for cosmetic fix up</p></li>
+                <li><p>Retirement or downsizing</p></li>
+                <li><p>Death of a loved one</p></li>
+                <li><p>Liquidating assets to pay bills</p></li>
+                <li><p>Inheriting a property you can’t keep</p></li>
+                <li><p>Tired of living in an ugly house</p></li>
+                <li><p>Job loss</p></li>
+                <li><p>Troublesome mortgage terms and More</p></li>
+             </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="first-section" *ngIf="isFound == 'false'">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+
+            <div class="col-lg-8 col-md-12 col-12 text-center">
+                <img src="https://cdn.dribbble.com/users/992274/screenshots/7392790/media/95483df50a0a3324c4cf9ccb1094b825.jpg" width="200" alt="">
+                <h2 class="pb-4">Something went wrong!</h2>
+
+                <p>Please refresh the page or <a href="">click here </a> to go home.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="second-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-lg-10 col-md-12 col-12 py-5">
+          <div class="header">
+            <hr />
+            <h1>Micheal the Home Buyer® <span class="fw-bold">has been Canada's #1 Cash
+                Home Buyer Since 2014.</span></h1>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<app-footer></app-footer>

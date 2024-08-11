@@ -1,0 +1,123 @@
+<app-navbar></app-navbar>
+<section class="intro">
+    <div class="container">
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-lg-8 col-md-8 col-12 ">
+          <h1>Give Us Your Feedback!</h1>
+          <h3>Help us grow by sharing your feedback.
+            We value your input as we strive to continuously improve and learn.
+            Complete our quick form today!</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="first-section">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-10 col-md-12 col-12">
+            <form  #feedbackForm="ngForm"
+            (ngSubmit)="feedbackFormData(feedbackForm)" class="needs-validation"
+            novalidate="">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6 col-6">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingInput"  [(ngModel)]="formData.firstName"  placeholder="First Name" name="firstName" #firstNameRef="ngModel"  autocomplete="new-password"  ngModel required="" #firstNameInput>
+                      <label for="floatingInput">First name*</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6  col-md-6 col-6">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingInput" [(ngModel)]="formData.lastName" placeholder="Last Name" name="lastName" #lastNameRef="ngModel"  autocomplete="new-password"  ngModel required="" #lastNameInput>
+                      <label for="floatingInput">Last name*</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12 ">
+               <div class="row">
+    
+                  <div class="col-lg-6  col-md-6 col-12">
+                    <div class="form-floating mb-3">
+                      <input type="tel" class="form-control" id="floatingInput" [(ngModel)]="formData.phoneNumber"  placeholder="Phone Number" [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"  autocomplete="new-password"  ngModel required="" #phoneInput>
+                      <label for="floatingInput">Phone number*</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6  col-md-6 col-12">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="floatingInput" [(ngModel)]="formData.email"  placeholder="Email" name="email" #emailRef="ngModel"  autocomplete="new-password"  ngModel required="" #emailInput>
+                      <label for="floatingInput">Email*</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-12">
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" [(ngModel)]="formData.comments"  placeholder="Leave a comment here" name="comments" #commentsRef="ngModel" ngModel required="" style="height: 200px" #commentsInput></textarea>
+                    <label for="floatingTextarea">Tell us about your experience*</label>
+                 
+                  </div>
+              </div>
+            </div>
+    
+            <div class="mt-4 form-check">
+              <input type="checkbox" class="form-check-input" name="requestRespond" [(ngModel)]="formData.requestRespond">
+              <label class="form-check-label" for="exampleCheck1">Check this box, if you like us to respond by email.
+              </label>
+            
+            </div>
+
+            
+            <div class="mt-4">
+              <!-- <button class="btn btn-danger px-5 py-3" id="button-vary1" type="submit" 
+              [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+              <button type="submit" class="btn btn-danger px-5 py-3" id="button-vary1"
+              [disabled]="!feedbackForm.form.valid">Submit Feedback</button>
+            </div>
+           
+              
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="second-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-lg-10 col-md-12 col-12 py-5">
+          <div class="header">
+            <hr />
+            <h1>We value your feedback as it plays a vital role in improving our services. Your insights and suggestions are invaluable to us in our continuous efforts to provide you with an exceptional experience. </h1>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="third-section">
+    <div class="container">
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-lg-8 pb-5">
+          <div class="header">
+            <h2>Get answers to commonly asked questions.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <div class="anchor-para">
+            <p>Explore our FAQ page for answers to the most popular questions we’ve received over the past 25 years. It’s a valuable resource to find the information you may be looking for.</p>
+          </div>
+          <a href="faqs" class="btn btn-dark px-5 py-3 mt-4" id="button-vary1" target="_blank">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<app-footer></app-footer>

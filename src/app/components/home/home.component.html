@@ -1,0 +1,260 @@
+<app-navbar></app-navbar>
+
+
+<section class="cover">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-12">
+                <div>
+                    <h1 class="pb-4">Get a fair, all-cash offer for your house you can trust.</h1>
+                    <p class="pb-4 fw-bold fs-5">We buy houses for cash and with 25 years of experience, we know how to make
+                        selling
+                        fast, easy, and hassle-free.</p>
+
+                </div>
+                <div>
+                    <input ngx-google-places-autocomplete [options]="options"
+                        (onAddressChange)="handleAddressChange($event)" name="address" type="text" class="form-control"
+                        placeholder="Enter your street address" aria-label="Enter you address"
+                        aria-describedby="button-addon2" #addressInput #inputField>
+
+                    <a href="contact-us" class="btn btn-success mt-3 py-3 px-5" id="button-vary1" (click)="saveAddress()"
+                        [ngClass]="{'disabled-link': !addressInput.value}">Get a Cash Offer</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sell-house-in-three-steps">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-10">
+                <div class="content">
+                    <p class="section-title pb-2">We Buy Ugly Houses<sup>®</sup> Proven Process</p>
+                    <h2 class="section-subheading">Sell your house in three easy steps.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center pt-5 g-5">
+            <div class="col-lg-4">
+                <div class="row text-center">
+                    <div class="col-12 pb-lg-5 pb-0">
+                        <img src="../../../assets/home/miscellanous/clipboard.png"
+                            alt="">
+                    </div>
+                    <div class="col-12">
+                        <div class="content">
+                            <p>Let's Talk</p>
+                            <p>Our property specialist will give you a free, no-obligation
+                                consultation at your convenience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row text-center">
+                    <div class="col-12  pb-lg-5 pb-0">
+                        <img src="../../../assets/home/miscellanous/second-column-svg.png"
+                            alt="">
+                    </div>
+                    <div class="col-12">
+                        <div class="content">
+                            <p>Get a Fair Cash Offer</p>
+                            <p>You sell directly to us. That means absolutely no expensive real estate agent
+                                commissions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="row text-center">
+                    <div class="col-12  pb-lg-5 pb-0">
+                        <img src="../../../assets/home/miscellanous/timer.png"
+                            alt="">
+                    </div>
+                    <div class="col-12">
+                        <div class="content">
+                            <p>A Fast Closing</p>
+                            <p>Avoid the hassle of showings and open houses. We can close as quickly, or as slowly, as
+                                you want.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-center pt-5">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a href="how-does-it-work" class="btn btn-danger p-3">See How it works</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="meet-one-of-the-local-home-buyer">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center content-top">
+            <div class="col-lg-10 col-12 ">
+                <p class="subheadline">MEET ONE OF THE LOCAL HOME BUYERS IN YOUR NEIGHBORHOOD</p>
+                <h2 class="fw-bold">Work directly with a friendly face in your area.</h2>
+                <img alt="MEET ONE OF THE LOCAL HOME BUYERS IN YOUR NEIGHBORHOOD"
+                    src="../../../assets/home/miscellanous/WBUH-25-Years-Experience-140k-Houses-Purchased-Horizontal.svg"
+                    loading="lazy" data-uw-rm-alt-original="MEET ONE OF THE LOCAL HOME BUYERS IN YOUR NEIGHBORHOOD"
+                    width="90%">
+
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-end text-center content-bottom">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a href="locations" class="btn btn-warning p-3">Find Your Location</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="experience">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-10">
+                <div class="content">
+                    <p class="section-title pb-2">We have over 25 years of experience resolving tough situations.</p>
+                    <h2 class="section-subheading">When to work with We Buy Ugly Houses<sup>®</sup></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-center pt-5">
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../../../assets/home/miscellanous/WBUH-WTUU-Repairs.svg" width="50" alt="">
+                <p class="heading-link pt-3"><a href="">Expensive Repairs</a></p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../../../assets/home/miscellanous/WBUH-WTUU-Financial.svg" width="50" alt="">
+                <p class="heading-link pt-3"><a href="">Relocating</a></p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../../../assets/home/miscellanous/WBUH-WTUU-Financial.svg" width="50" alt="">
+                <p class="heading-link pt-3"><a href=""> Financial Issues</a></p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../../../assets/home/miscellanous/WBUH-WTUU-Rental.svg" width="50" alt="">
+                <p class="heading-link pt-3"><a href="">Problematic Rental</a></p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../../../assets/home/miscellanous/WBUH-WTUU-Downsizing.svg" width="50" alt="">
+                <p class="heading-link pt-3"><a href="">Downsizing</a></p>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <img src="../../../assets/home/miscellanous/WBUH-WTUU-Inheriting.svg" width="50" alt="">
+                <p class="heading-link pt-3"><a href="">Inheriting House</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="what-you-can-expect">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-12">
+                <div class="content">
+                    <p class="section-title pb-2">HERE'S WHAT YOU CAN EXPECT WHEN YOU WORK WITH US</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-10">
+                <img src="../../../assets/home/miscellanous/WBUH-HVA-Advantage-Tablet-Desktop.svg"
+                    alt="">
+                <p class="my-4">After signing the contract to accept an offer, you have the next three days to consider
+                    your
+                    decision. If you change your mind during this option period, you can cancel the contract by
+                    notifying your property specialist in writing.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-end text-center content-bottom">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a href="locations" class="btn btn-success p-3">Get a cash offer</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="faqs">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-12">
+                <div class="content">
+                    <p class="section-title pb-2">HAVE MORE QUESTIONS?</p>
+                    <h2 class="section-subheading">Read our FAQs</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center mt-3">
+            <div class="col-lg-10">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                             How many homes has IBuyUglyHouses bought over the years????? 
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Since 2014 we have purchased hundreds of homes in the Province of Ontario We are not an outside agency that swoops in to buy up homes. </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item my-3">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Is there a fee you charge when you buy a house? 
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            No. Unlike many home buying companies or real estate agents, Express Homebuyers never charges a fee.</div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            My house needs several repairs. Does this mean you won’t buy it?? 
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Not at all! Most of the houses we purchase are in need of repairs or updating. So long as the home is basically in good condition, we’ll buy it from you.</div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-center pt-5">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a href="faqs" class="btn btn-outline-success p-3">View more faqs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="small-intro">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-2">
+                <img src="../../../assets/logo_transparent.png" width="100%" alt="">
+            </div>
+            <div class="col-lg-10">
+                <h5>Why is We Buy Ugly Houses® America’s #1 home buyer? Cash for houses is only the beginning.</h5>
+                <p>There’s just no faster or easier way to sell your house than selling to We Buy Ugly Houses®. We pay
+                    cash for houses “as is”—you don’t spend money and time on painting or cleaning, and you don’t have
+                    to wait while your house sits on the market. We can give you our fair cash offer at our first
+                    meeting and generally close in as fast as three weeks. Unlike other cash buyers, we don’t charge
+                    commissions and we pay typical closing costs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

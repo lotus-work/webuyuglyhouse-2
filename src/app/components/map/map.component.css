@@ -1,0 +1,21 @@
+.map-outer {
+  position: relative;
+}
+
+.map-container {
+  width: 100%;
+  height: 58vh;
+}
+
+.button-home-track {
+  position: absolute;
+  top: 52px;
+  right: 16px;
+}
+.mapboxgl-marker {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border:1px solid gray;
+  background-color:lightblue;
+}

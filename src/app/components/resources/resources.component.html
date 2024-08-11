@@ -1,0 +1,215 @@
+<app-navbar></app-navbar>
+<section class="common-header">
+    <div class="container">
+        <div class="row vh-50 d-flex justify-content-left align-items-center ">
+            <div class="col-lg-10">
+                <h1 class="fw-bold">How to sell your house</h1>
+                <h4 class="fw-bold">Check out our seller’s guide for information.</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-9 col-12">
+                <div>
+                    <h4>How to prepare for selling your house</h4>
+                    <p>With over 25 years of experience in buying homes, we know what it takes to sell your house. We’ve
+                        curated articles and resources to help guide you through your property sale. With the right
+                        information, selling your house fast can be easy.</p>
+
+                </div>
+
+
+                <div class="mt-5">
+                    <div class="row g-5 mb-5">
+                        <div class="col-lg-4">
+                            <img src="../../../assets/resourses/seller-resources/WBUH-SR-Determine-Right-Time-To-Sell-230x130px.jpg" width="100%" alt="">
+
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="fs-5" style="color: black;">Determine whether it’s the right time to sell.</p>
+                            <p>There are several factors to consider and some important questions to ask yourself.
+                                What’s the current market like? Do changing circumstances mean your house doesn’t fit
+                                your lifestyle? Can you no longer afford the mortgage or the upkeep?</p>
+                        </div>
+                    </div>
+                    <div class="row g-5">
+                        <div class="col-lg-4 order-lg-2 order-md-1 order-1">
+                            <img src="../../../assets/resourses/seller-resources/3.jpg" width="100%" alt="">
+
+                        </div>
+                        <div class="col-lg-8 order-lg-1 order-md-2 order-2">
+                            <p class="fs-5" style="color: black;">Figure out how much your house is worth.</p>
+                            <p>It’s important to do some research to find out how much houses are selling for in your
+                                neighborhood. Be sure to compare your house to ones that are as similar to yours as
+                                possible. You can also get a free, no-obligation cash offer from We Buy Ugly Houses® to
+                                see what your house could sell for. </p>
+                        </div>
+                    </div>
+                    <div class="row g-5 mb-5">
+                        <div class="col-lg-4">
+                            <img src="../../../assets/resourses/seller-resources/4.jpg" width="100%" alt="">
+
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="fs-5" style="color: black;">Decide how to sell your house</p>
+                            <p>There are three main ways to sell your house. You can go the traditional route and list
+                                it with a real estate agent, or you can sell it yourself, which is a process called for
+                                sale by owner (FSBO). The third option is to sell to a cash home buyer like We Buy Ugly
+                                Houses.</p>
+                        </div>
+                    </div>
+                    <div class="row g-5">
+                        <div class="col-lg-4 order-lg-2 order-md-1 order-1">
+                            <img src="../../../assets/resourses/seller-resources/5.jpg" width="100%" alt="">
+
+                        </div>
+                        <div class="col-lg-8 order-lg-1 order-md-2 order-2">
+                            <p class="fs-5" style="color: black;">Prepare your house for sale.</p>
+                            <p>Check your house for areas that may need improvements or repairs. Decide what renovations
+                                or changes you want to make, and which ones fit your budget. If certain repairs or
+                                updates are too costly or time-consuming, consider selling your house “as is” to We Buy
+                                Ugly Houses.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div>
+                            <h4>How to sell your house fast</h4>
+                            <p>If you want to save yourself the time, money, and stress of finding an agent, fixing up
+                                your house, and endless showings, there’s an easier way to sell your house. </p>
+
+                            <p>We buy houses “as is,” so you don’t have to repair, update, or clean anything. You can
+                                even leave any unwanted belongings behind, and we’ll take care of them. </p>
+
+                            <p>We can close fast, sometimes in as little as three weeks. Contact We Buy Ugly Houses
+                                today to avoid the stress of the traditional selling process. </p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <a href="contact-us" class="btn btn-danger">GET A CASH OFFER</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-3 col-12  order-lg-2 order-md-2 order-1">
+                <div class="fifth-section py-5 px-3  rounded rounded-4">
+                    <h4 class="pb-4">Set up a free, no-commitment home review.</h4>
+
+                    <form #contactForm="ngForm" (ngSubmit)="contactFormData(contactForm)" class="needs-validation"
+                        novalidate="">
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.firstName" placeholder="First Name"
+                                        name="firstName" #firstNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">First name*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.lastName" placeholder="Last Name"
+                                        name="lastName" #lastNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Last name*</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.phoneNumber" placeholder="Phone Number"
+                                        [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"
+                                        ngModel required="">
+                                    <label for="floatingInput">Phone Number*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.email" placeholder="Email" name="email"
+                                        #emailRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Email*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        ngx-google-places-autocomplete [options]="options"
+                                        (onAddressChange)="handleAddressChange($event)" id="floatingInput"
+                                        [(ngModel)]="formData.sessionFullStreetAddress" placeholder="Property address"
+                                        name="streetAddress" #streetAddressRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Property address*</label>
+                                    <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                                        <img src="../../../assets/images/powered-by-google-transparent.png" width="100"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-4 form-check" id="confirm-msg">
+                            <input type="checkbox" class="form-check-input" name="confirm"
+                                [(ngModel)]="formData.confirm" required>
+                            <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and
+                                provide my
+                                consent
+                                for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the
+                                phone
+                                number provided
+                                above via text (SMS) or calling using automated dialing technology to schedule an
+                                appointment and for
+                                marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent
+                                not
+                                required to
+                                purchase services. Message and data rates may apply. Message frequency varies by
+                                account. To opt-out at
+                                any
+                                time reply STOP to the message you receive. For more information, please review our <a
+                                    href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy"
+                                    target="_blank">Privacy
+                                    Policy</a>.
+                            </label>
+
+                        </div>
+                        <div class="mt-4">
+                            <!-- <button class="btn btn-danger px-5 py-3" id="button-vary1" type="submit" 
+                  [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+                            <button type="submit" class="btn btn-warning px-5 py-3" id="button-vary1"
+                                [disabled]="!contactForm.form.valid">Get my fair cash offer</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="let-get-you-moving">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-lg-10 col-12">
+                <p class="fs-4 fw-bold">It’s as easy as 1–2–3!</p>
+                <p class="fs-5">Let’s get started for free today—no obligation and no pressure. <br/> With just a quick visit to your house, we can often make you a fair cash offer on the spot!</p>
+
+            </div>
+
+        </div>
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a class="btn btn-warning p-3" href="contact-us">Contact us Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

@@ -1,0 +1,151 @@
+<section class="top-heading d-none d-lg-block">
+  <div class="container ">
+    <div class="row d-flex justify-content-between align-items-center">
+      <div class="col-lg-12 col-md-12 col-12 text-end social-icons d-flex justify-content-end align-items-center">
+        <!-- <a href="https://www.facebook.com/MichaeltheHomebuyer/" target="_blank" class="bi bi-facebook"></a>
+      <a href="https://www.instagram.com/michaelthehomebuyer/" target="_blank" class="bi bi-instagram"></a>
+      <a href="https://twitter.com/Michaelthebuyer/" target="_blank" class="bi bi-twitter-x"></a> -->
+        <p class="contact-us"><a href="contact-us" target="_parent">Contact Us</a></p>
+        <h3> <a href="tel:18889869883" style="text-decoration: none; font-weight: 800; color: #e40016;"> <img
+              src="../../../assets/navbar/phone.svg" width="15" alt="" style="margin-right: 4px;"> <span
+              class="fw-bold">1 (888)
+              986-9883</span></a>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="navigation">
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+      <div class="logo my-auto d-flex align-items-center justify-content-center mb-3">
+        <!-- <a href="#">
+          <img alt="Logo" width="180" src="../../../assets/logo_ibuyuglyhouse.svg"></a>
+        -->
+        <a href="/" style="text-decoration: none;">
+
+          <!-- <h1>I Buy Ugly Houses</h1> -->
+          <img alt="Logo" width="240" src="../../../assets/logo_ibuyuglyhouse.svg">
+        </a>
+
+      </div>
+
+      <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler">
+        <a href="tel:18889869883"><img src="../../../assets/navbar/phone.svg" width="20" alt=""
+            style="margin: 0 10px 10px 0;"></a>
+        <i aria-hidden="true" class="fa fa-bars fs-1"></i></button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse ">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a href="how-does-it-work" class="nav-link px-2 mx-2">
+              How It Works</a></li>
+          <li class="nav-item"><a href="faqs" class="nav-link px-2 mx-2">FAQ</a></li>
+
+          <li class="nav-item"><a href="locations" class="nav-link px-2 mx-2">
+              Locations</a></li>
+          <li class="nav-item dropdown"><a href="seller-resources" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" class="nav-link dropdown-toggle px-2 mx-2">Resources </a>
+            <ul aria-labelledby="navbarDropdown" class="dropdown-menu py-3">
+              <li><a href="seller-resources" class="dropdown-item">
+                Seller Resources</a></li>
+              <li><a href="inherited-house" class="dropdown-item">
+                  Inherited House</a></li>
+              <li><a href="why-sell-to-us/house-in-disrepair" class="dropdown-item">
+                  House in Disrepair</a></li>
+              <li><a href="financial-distress" class="dropdown-item">Financial Distress</a></li>
+              <li><a href="retirement-downsizing" class="dropdown-item">Retirement/Downsizing</a></li>
+              <li><a href="why-sell-to-us/rental-property" class="dropdown-item">Sell Rental Property</a></li>
+              <li><a href="sell-house-as-is" class="dropdown-item">Sell House "As Is"</a></li>
+              <li><a href="cash-home-buyers" class="dropdown-item">Cash Home Buyers</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="investor-sign-up" class="nav-link px-2 mx-2">
+              Investor Sign up</a></li> -->
+          <li class="nav-item"><a href="company-info" class="nav-link px-2 mx-2">About</a></li>
+          <li class="nav-item"><a href="contact-us" class="nav-link px-2 mx-2">Contact</a></li>
+
+        </ul>
+        <div class="d-block d-md-none">
+          <hr />
+          <div class="contactnav-wrap  mt-4" id="mobile">
+            <div class="icon me-2">
+              <img src="../../../assets/navbar/phone.svg" width="20" alt="">
+            </div>
+            <div class="box-body justify-content-start align-items-start">
+              <h5 class="">
+                Contact for support <br />
+                <a href="tel:18889869883">1 (888) 986-9883</a>
+
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</section>
+
+
+<div class="header sticky-top bg-white py-3 " *ngIf="showNav">
+  <div class="container">
+    <div class="row ">
+      <div class="col-lg-2 mt-3">
+        <a href="/" style="text-decoration: none;">
+
+          <!-- <h1>I Buy Ugly Houses</h1> -->
+          <img alt="Logo" width="240" src="../../../assets/logo_ibuyuglyhouse.svg">
+        </a>
+      </div>
+      <div class="col-lg-10 d-flex justify-content-end align-items-center">
+        <div class="row">
+          <div class="col">
+            <input ngx-google-places-autocomplete [options]="options" (onAddressChange)="handleAddressChange($event)"
+              name="address" type="text" class="form-control" placeholder="Enter your property address"
+              aria-label="Enter you address" aria-describedby="button-addon2" #addressInput #inputField>
+          </div>
+          <div class="col">
+
+            <a href="contact-us" class="btn btn-danger col-12 py-3" id="button-vary1" (click)="saveAddress()"
+              [ngClass]="{'disabled-link': !addressInput.value}">Take the first step</a>
+
+
+          </div>
+        </div>
+        <div class="row ms-lg-4 justify-content-center align-items-center">
+          <div>
+
+
+            <a href="tel:18889869883" style="text-decoration: none; font-weight: 800; color: #dd3333;" class="fs-5">
+              <img src="../../../assets/navbar/phone.svg" width="15" alt="" style="margin-right: 4px;"> 1 (888)
+              986-9883</a>
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="how-does-it-work">How it works</a></li>
+                <li><a href="locations">Locations</a></li>
+                <li><a href="faqs">FAQs</a></li>
+                <!-- <li><a href="selling-your-house">Why sell to us</a>
+                <li><a href="selling-your-house/i-need-to-sell-my-house-fast">Speed and simplicity</a></li>
+                <li><a href="selling-your-house/experience-and-trust">experience and trust</a></li>
+                <li><a href="selling-your-house/personal-touch">Personal Trust</a></li>
+                <li><a href="selling-your-house/reviews">Customer Reviews</a></li>
+                <li><a href="investor-sign-up">Investor sign up</a></li> -->
+                <li><a href="company-info">About</a></li>
+                <li><a href="contact-us">Contact</a></li>
+
+              </ul>
+            </div>
+
+            <span style="font-size:40px;cursor:pointer" id="main" (click)="openNav()">&#9776;</span>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
