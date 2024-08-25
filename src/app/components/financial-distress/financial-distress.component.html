@@ -1,1 +1,173 @@
-<p>financial-distress works!</p>
+<app-navbar></app-navbar>
+<section class="common-header">
+    <div class="container">
+        <div class="row vh-50 d-flex justify-content-left align-items-center ">
+            <div class="col-lg-10">
+                <h1 class="fw-bold">Get needed relief from financial stress when you can’t afford mortgage payments or
+                    other debt.</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-12">
+                <div>
+                    <h4>Are financial concerns causing you stress?</h4>
+                    <p>It seems like today life can throw even more complications at us than it used to. It’s sad to see
+                        how common it is for people to find they suddenly have unmanageable debt burdens. Payments for
+                        mortgages, credit cards, car loans, school loans, and other debt can easily become more than you
+                        can handle. You may even be facing the threat of foreclosure and the prospect of losing the
+                        equity in your house to your bank or mortgage company. </p>
+                    <p>If that’s why you’re considering selling your house, we can help you.</p>
+                </div>
+                <div>
+                    <h4>We can customize a solution for your situation.</h4>
+                    <p>I Buy Ugly Houses® has helped more homeowners than anyone with a quick cash sale, and we can
+                        work with you to find a solution for your unique situation. If we can buy your house fast for
+                        cash, it can help spare you the heartache and trouble that comes from foreclosure or other
+                        financial difficulties.</p>
+                </div>
+
+                <div>
+                    <h4>Getting our fair cash offer is simple, easy, and free.</h4>
+                    <p>We buy houses “as is.” You won’t have to spend time or money making any repairs, having showings,
+                        or even picking up a broom. We can make a fair cash offer on our first visit, and unlike many of
+                        our competitors, it won’t be lowered by surprise fees before closing. We can close within three
+                        weeks, or later, if that works better for you. Imagine the peace of mind you’ll have with a
+                        fresh start.</p>
+
+                </div>
+
+                <div>
+                    <h4>How we work</h4>
+                    <p>At I Buy Ugly Houses, we have the trusted know-how to close quickly with an all-cash offer. We cover all typical closing costs and don’t charge commissions or fees, saving you money. You can even leave behind anything you don’t want to move, and we’ll take care of it. With over 10 years of experience buying houses, our long-lasting relationships with lenders makes financing easy. </p>
+                   
+                    <img src="../../../assets/how-it-works/howtosellhouse.png" alt="" width="100%">
+
+                </div>
+
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-12  order-lg-2 order-md-2 order-1">
+                <div class="fifth-section py-5 px-3  rounded rounded-4">
+                    <h4 class="pb-4">Set up a free, no-commitment home review.</h4>
+
+                    <form #contactForm="ngForm" (ngSubmit)="contactFormData(contactForm)" class="needs-validation"
+                        novalidate="">
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.firstName" placeholder="First Name"
+                                        name="firstName" #firstNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">First name*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.lastName" placeholder="Last Name"
+                                        name="lastName" #lastNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Last name*</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.phoneNumber" placeholder="Phone Number"
+                                        [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"
+                                        ngModel required="">
+                                    <label for="floatingInput">Phone Number*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.email" placeholder="Email" name="email"
+                                        #emailRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Email*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        ngx-google-places-autocomplete [options]="options"
+                                        (onAddressChange)="handleAddressChange($event)" id="floatingInput"
+                                        [(ngModel)]="formData.sessionFullStreetAddress" placeholder="Property address"
+                                        name="streetAddress" #streetAddressRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Property address*</label>
+                                    <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                                        <img src="../../../assets/images/powered-by-google-transparent.png" width="100"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-4 form-check" id="confirm-msg">
+                            <input type="checkbox" class="form-check-input" name="confirm"
+                                [(ngModel)]="formData.confirm" required>
+                            <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and
+                                provide my
+                                consent
+                                for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the
+                                phone
+                                number provided
+                                above via text (SMS) or calling using automated dialing technology to schedule an
+                                appointment and for
+                                marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent
+                                not
+                                required to
+                                purchase services. Message and data rates may apply. Message frequency varies by
+                                account. To opt-out at
+                                any
+                                time reply STOP to the message you receive. For more information, please review our <a
+                                    href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy"
+                                    target="_blank">Privacy
+                                    Policy</a>.
+                            </label>
+
+                        </div>
+                        <div class="mt-4">
+                            <!-- <button class="btn btn-danger px-5 py-3" id="button-vary1" type="submit" 
+                  [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+                            <button type="submit" class="btn btn-warning px-5 py-3" id="button-vary1"
+                                [disabled]="!contactForm.form.valid">Get my fair cash offer</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="let-get-you-moving">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-lg-10 col-12">
+                <p class="fs-4 fw-bold">It’s as easy as 1–2–3!</p>
+                <p class="fs-5">Let’s get started for free today—no obligation and no pressure. <br /> With just a quick
+                    visit to your house, we can often make you a fair cash offer on the spot!</p>
+
+            </div>
+
+        </div>
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a class="btn btn-warning p-3" href="contact-us">Contact us Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

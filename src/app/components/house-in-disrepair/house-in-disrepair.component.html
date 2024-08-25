@@ -1,1 +1,205 @@
-<p>house-in-disrepair works!</p>
+<app-navbar></app-navbar>
+<section class="common-header">
+    <div class="container">
+        <div class="row vh-50 d-flex justify-content-left align-items-center ">
+            <div class="col-lg-10">
+                <h1 class="fw-bold">House repair costs have become too much.</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-12">
+                <div>
+                    <h4>Many costly home repairs occur when you’re not ready financially.</h4>
+                    <p>Owning your own home is a rewarding experience, but it comes with a lot of responsibility and
+                        maintenance costs. Some maintenance may be routine, but other unexpected repairs can put you in
+                        a financial crisis.</p>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="../../../assets/resourses/house-disrepair/FoundationIssues-2-300x200.jpg" alt=""
+                                width="100%">
+                        </div>
+                        <div class="col-lg-8">
+                            <p>We’ve seen how repairs have affected homeowners across the country. In the North and
+                                Northeast, they often have expensive repairs of entire septic systems. In many parts of
+                                the South and Southwest, foundation problems often arise from soil that frequently
+                                expands and contracts, even with newer homes.</p>
+                            <p>In addition to the high costs of these repairs, there’s also a loss of time to
+                                consider—the time spent on finding contractors and missing work during the repair
+                                process. Even more time could be needed if you try to do the work yourself.</p>
+                        </div>
+                    </div>
+                    <p class="mt-3">You don’t always have enough money in the bank or available credit to take on large
+                        repairs.
+                        Often, these issues get put off until they become unmanageable financial burdens. It’s easy to
+                        fall behind, and costly home repairs pile up until your situation is unlivable and unaffordable.
+                        See how much expensive repairs can cost you.</p>
+                </div>
+                <div>
+                    <h4>Are house repair costs keeping you from selling your house?</h4>
+                    <p>Usually, people who want to sell an inherited house consider the traditional listing and selling
+                        process first. What they rarely consider is the upfront cost of updating, repairing, cleaning,
+                        and staging the house to get it ready for sale, all while potentially needing multiple parties
+                        to agree on each of those decisions. Then there are real estate agent fees and closing costs to
+                        consider. Plus, there’s no guarantee how quickly it will sell.</p>
+
+                </div>
+
+                <div>
+                    <h4>What about a quick all-cash sale?</h4>
+                    <p>Whenever you have guests at your house, you want it to be at its best. The stakes are even higher
+                        if you have prospective buyers visiting your home. Costly home repairs left unattended can make
+                        the house far less appealing, and it may stay on the market for much longer than anticipated,
+                        with no end in sight. If you do get an offer, it’s possible you’ll have to lower the price of
+                        the house more than what the repairs would have cost you.</p>
+                </div>
+
+                <div>
+                    <h4>We offer an easier, faster way to sell your house.</h4>
+                    <p>We have the ideal solution if you’re facing high repair costs. We can buy your house “as is.” You
+                        won’t have to do any cleaning or pay for any repairs. We don’t charge commissions and we pay all
+                        normal closing costs.</p>
+                    <p>It starts with a visit to your house that won’t cost you a thing. Often on that one visit, we
+                        make a firm cash offer you can depend on. You’ll know how much cash you’ll receive for your
+                        house, and we can close in as little as three weeks, or when it’s convenient for you. We buy
+                        houses “as is,” so you don’t have to repair, paint, or clean up a thing. You can even leave
+                        behind anything you don’t want to move. We make it easy and fast for you to have cash in hand
+                        and make a fresh start.</p>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img src="../../../assets/resourses/house-disrepair/Farmhouse.jpg" alt=""
+                                    width="100%">
+                            </div>
+                            <div class="col-lg-8">
+                                <p>Your house will have a fresh start, too, after necessary repairs give it a new life.</p>
+                            </div>
+                        </div>
+                        
+                    <img src="../../../assets/how-it-works/howtosellhouse.png" alt="" width="100%">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12  order-lg-2 order-md-2 order-1">
+                <div class="fifth-section py-5 px-3  rounded rounded-4">
+                    <h4 class="pb-4">Set up a free, no-commitment home review.</h4>
+
+                    <form #contactForm="ngForm" (ngSubmit)="contactFormData(contactForm)" class="needs-validation"
+                        novalidate="">
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.firstName" placeholder="First Name"
+                                        name="firstName" #firstNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">First name*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.lastName" placeholder="Last Name"
+                                        name="lastName" #lastNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Last name*</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.phoneNumber" placeholder="Phone Number"
+                                        [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"
+                                        ngModel required="">
+                                    <label for="floatingInput">Phone Number*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.email" placeholder="Email" name="email"
+                                        #emailRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Email*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        ngx-google-places-autocomplete [options]="options"
+                                        (onAddressChange)="handleAddressChange($event)" id="floatingInput"
+                                        [(ngModel)]="formData.sessionFullStreetAddress" placeholder="Property address"
+                                        name="streetAddress" #streetAddressRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Property address*</label>
+                                    <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                                        <img src="../../../assets/images/powered-by-google-transparent.png" width="100"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-4 form-check" id="confirm-msg">
+                            <input type="checkbox" class="form-check-input" name="confirm"
+                                [(ngModel)]="formData.confirm" required>
+                            <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and
+                                provide my
+                                consent
+                                for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the
+                                phone
+                                number provided
+                                above via text (SMS) or calling using automated dialing technology to schedule an
+                                appointment and for
+                                marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent
+                                not
+                                required to
+                                purchase services. Message and data rates may apply. Message frequency varies by
+                                account. To opt-out at
+                                any
+                                time reply STOP to the message you receive. For more information, please review our <a
+                                    href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy"
+                                    target="_blank">Privacy
+                                    Policy</a>.
+                            </label>
+
+                        </div>
+                        <div class="mt-4">
+                            <!-- <button class="btn btn-danger px-5 py-3" id="button-vary1" type="submit" 
+                  [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+                            <button type="submit" class="btn btn-warning px-5 py-3" id="button-vary1"
+                                [disabled]="!contactForm.form.valid">Get my fair cash offer</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="let-get-you-moving">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-lg-10 col-12">
+                <p class="fs-4 fw-bold">It’s as easy as 1–2–3!</p>
+                <p class="fs-5">Let’s get started for free today—no obligation and no pressure. <br /> With just a quick
+                    visit to your house, we can often make you a fair cash offer on the spot!</p>
+
+            </div>
+
+        </div>
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a class="btn btn-warning p-3" href="contact-us">Contact us Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

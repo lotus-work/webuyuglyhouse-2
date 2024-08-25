@@ -231,7 +231,7 @@ export class FaqsComponent implements OnInit {
         "type": "text",
         "values": [
             {
-                "value": "<p>No. Unlike many home buying companies or real estate agents, Express Homebuyers never charges a fee.</p>"
+                "value": "<p>No. Unlike many home buying companies or real estate agents,we  never charges a fee.</p>"
             }
         ]
     },

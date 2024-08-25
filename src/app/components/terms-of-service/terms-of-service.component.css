@@ -1,5 +1,5 @@
 .intro{
-    background-color: #a81c1c;
+    background-color: #3ebbb1;
     color: #fff;
     padding: 80px 0;
 }
@@ -9,7 +9,7 @@
 .first-section a {
     font-weight: bold;
     text-decoration: none;
-    color: #a81c1c !important;
+    color: #3ebbb1 !important;
 }
 
 .first-section a:hover {

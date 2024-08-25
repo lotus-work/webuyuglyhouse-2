@@ -1,1 +1,186 @@
-<p>cash-home-buyers works!</p>
+<app-navbar></app-navbar>
+<section class="common-header">
+    <div class="container">
+        <div class="row vh-50 d-flex justify-content-left align-items-center ">
+            <div class="col-lg-10">
+                <h1 class="fw-bold">Our Fast Home Buyers Buy Houses for Cash</h1>
+                <h4 class="fw-bold">I Buy Ugly Houses® - Fast Cash Home Buyers</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-12">
+                <div>
+                    <h4>Get Cash Offers for Homes</h4>
+                    <p>When we buy homes, we pay cash for homes for a number of reasons beneficial to any homeowner
+                        needing to sell a home. Perhaps the biggest benefit is that cash is fast. There are no mortgage
+                        approvals to worry about with an all-cash deal that can close within 30 days. We buy houses for
+                        cash throughout the USA.</p>
+                    <p>We’re home buyers who can also save you money with our all cash for homes deals. You won’t have
+                        to deal with repairing, decorating, or even cleaning your home. We buy houses for cash, and we
+                        buy homes “AS-IS”. Our service is extremely useful for those who are stuck in an ugly situation
+                        looking for a way out. No one wants to be stuck in an ‘Ugly’ situation forever and lose
+                        everything. There is always a way out. The reality of drowning in home repair expenses, mortgage
+                        payments for a property that doesn’t give any returns is all too real a situation that most
+                        property owners face across the nation. The good thing is that help is here. The first step is
+                        giving is a call for us to understand your situation. Every situation is different, that’s why
+                        we want to give you fast cash for your house.</p>
+                </div>
+                <div>
+                    <h4>We buy houses for cash</h4>
+                    <p>You also won’t have to pay closing costs, real estate commissions, or pour money into your home
+                        to satisfy unreasonable home buyer demands when you sell to I Buy Ugly Houses® . It’s fast cash
+                        for your home as is so you can move out and move on with your life.</p>
+                </div>
+
+                <div>
+                    <h4>Cash Home Buyers</h4>
+                    <h4>Cash for houses
+                    </h4>
+                    <p>I Buy Ugly Houses® is a national network of professional homebuyers who understand the urgency
+                        of homeowners needing to sell their home quickly. That’s why when we buy homes we promise fast
+                        closings, and we pay 100% cash for houses, townhouses, condos, duplexes, multi-family buildings,
+                        and some commercial properties. Other home buyers will say “we buy houses”, but often they don’t
+                        for cash. Cash home buyers are normally much better than buyers who depend on bank financing.
+                        Home sellers across the USA have trusted us for years, and it’s easy to get fast cash for homes.
+                    </p>
+                    <p>If you’re looking for homebuyers who can buy your home quickly, contact I Buy Ugly Houses®. We
+                        pay cash for houses every day across the United States, and we’ll buy your home too. We buy
+                        houses for cash that are ugly cosmetically and structurally. We also buy homes where the
+                        homeowners are in ugly situations such as divorce, facing foreclosure, or the need to relocate.
+                        Some of these situations make you need to move quickly, that is why we want to give you fast
+                        cash for your house.</p>
+
+                        <img src="../../../assets/resourses/cash-home-buyers/how_it_works-1.jpg" width="100%" alt="">
+                </div>
+
+                <div>
+                    <h4>How We Buy Houses for Cash</h4>
+                    <h4>The I Buy Ugly Houses® home buying process is fast and simple.</h4>
+                    <ol>
+                        <li>Call I Buy Ugly Houses® , or submit our convenient website form to give us some brief
+                            information about your home.</li>
+                        <li>One of our local franchisees in your area will contact you, often within minutes, to
+                            schedule a visit to your home.</li>
+                        <li>Our franchisee will visit your home, explain the selling process, answer your questions,
+                            evaluate the condition of your home, and make a free, fair, no-obligation cash offer to
+                            purchase your home. You can accept our franchisee’s no-obligation cash offer on the spot, or
+                            you can take some time to think about it first.</li>
+                        <li>If you accept the offer, we’ll set up a fast closing, typically within 30 days, where we’ll
+                            pay you cash for your home so you can get out of your ugly home fast.</li>
+                    </ol>
+
+                </div>
+                <div>
+                    <h4>Cash Home Buyer, We Pay Cash For Houses</h4>
+                    <p>We buy houses fast, and for cash, and we want to buy yours if you’re ready to sell your house fast. Contact I Buy Ugly Houses® today. Call us to speak with one of our expert real estate investors, or complete our convenient online cash for houses form and we’ll call you.</p>
+                  
+                </div>
+
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-12  order-lg-2 order-md-2 order-1">
+                <div class="fifth-section py-5 px-3  rounded rounded-4">
+                    <h4 class="pb-4">Set up a free, no-commitment home review.</h4>
+
+                    <form #contactForm="ngForm" (ngSubmit)="contactFormData(contactForm)" class="needs-validation"
+                        novalidate="">
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.firstName" placeholder="First Name"
+                                        name="firstName" #firstNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">First name*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.lastName" placeholder="Last Name"
+                                        name="lastName" #lastNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Last name*</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.phoneNumber" placeholder="Phone Number"
+                                        [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"
+                                        ngModel required="">
+                                    <label for="floatingInput">Phone Number*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.email" placeholder="Email" name="email"
+                                        #emailRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Email*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        ngx-google-places-autocomplete [options]="options"
+                                        (onAddressChange)="handleAddressChange($event)" id="floatingInput"
+                                        [(ngModel)]="formData.sessionFullStreetAddress" placeholder="Property address"
+                                        name="streetAddress" #streetAddressRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Property address*</label>
+                                    <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                                        <img src="../../../assets/images/powered-by-google-transparent.png" width="100"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-4 form-check" id="confirm-msg">
+                            <input type="checkbox" class="form-check-input" name="confirm"
+                                [(ngModel)]="formData.confirm" required>
+                            <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and
+                                provide my
+                                consent
+                                for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the
+                                phone
+                                number provided
+                                above via text (SMS) or calling using automated dialing technology to schedule an
+                                appointment and for
+                                marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent
+                                not
+                                required to
+                                purchase services. Message and data rates may apply. Message frequency varies by
+                                account. To opt-out at
+                                any
+                                time reply STOP to the message you receive. For more information, please review our <a
+                                    href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy"
+                                    target="_blank">Privacy
+                                    Policy</a>.
+                            </label>
+
+                        </div>
+                        <div class="mt-4">
+                            <!-- <button class="btn btn-danger px-5 py-3" id="button-vary1" type="submit" 
+                  [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+                            <button type="submit" class="btn btn-warning px-5 py-3" id="button-vary1"
+                                [disabled]="!contactForm.form.valid">Get my fair cash offer</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

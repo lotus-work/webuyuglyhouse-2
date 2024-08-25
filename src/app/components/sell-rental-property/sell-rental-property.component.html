@@ -1,1 +1,184 @@
-<p>sell-rental-property works!</p>
+<app-navbar></app-navbar>
+<section class="common-header">
+    <div class="container">
+        <div class="row vh-50 d-flex justify-content-left align-items-center ">
+            <div class="col-lg-10">
+                <h1 class="fw-bold">As a landlord, do you feel like your houses are owning you?</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-12">
+                <div>
+                    <h4>Haven’t you already spent enough time and money on your rentals?</h4>
+                    <p>If you own rental property, you understand how challenging it is to be a landlord. The income
+                        stream can stop seeming worth it—or stop altogether—with changes in the neighborhood, tenant
+                        issues, vacancies, maintenance, repairs, taxes, debt, the list goes on and on.</p>
+                    <p>If you’re ready to move on from your rental property, we’re here to help. You won’t have to spend
+                        any more time or money trying to find a tenant, repairing things, or even cleaning your
+                        property. We’ll see it “as is” and can buy it that way too—occupied or not. You don’t have to
+                        pay us any commissions, and we pay typical closing costs. We not only save you time and effort
+                        when you to sell you us, we save you money.</p>
+                </div>
+                <div>
+                    <h4>Tired of being a landlord? We make selling your rentals quick, easy, and hassle-free.?</h4>
+                    <p>We’re ready to buy now. We can make you a fast, fair cash offer, often on our first and only
+                        visit. After your acceptance of our offer, we can close quickly, sometimes in as little as three
+                        weeks, or later, if that fits your schedule better.</p>
+                    <p>It’s likely we can buy your property much faster than you can rent it.. </p>
+                </div>
+
+                <div>
+                    <h4>Do you have problems with tenants trashing your property?</h4>
+                    <p>When we say we buy properties “as is,” we mean it. You don’t need to improve, repair, or clean
+                        any part of your rental property before we visit or at the time of the sale. You don’t need to
+                        waste any time or money on fixing a property tenants may have damaged. You can even leave any
+                        belongings they’ve abandoned, and we’ll take care of it all.</p>
+
+                </div>
+
+                <div>
+                    <h4>Cash in your pocket can become properties in your portfolio.</h4>
+                    <p>Maybe your properties have done well, you don’t have landlord problems, but you want to make more
+                        investments. If you’re looking to raise investment capital, our quick, all-cash, no-hassle
+                        purchase can help you get the money you need to move fast and take advantage of opportunities
+                        that may not be available for long.</p>
+                  
+                </div>
+                <div>
+                    <h4>How we work</h4>
+                    <p>At I Buy Ugly Houses, we've helped more homeowners out of ugly situations than anyone and have
+                        the trusted know-how to close quickly with an all-cash offer. We treat each house and each
+                        seller as a completely unique situation, and we’ll work with you to determine how we can best
+                        help you and your current situation. We make selling your house quick, easy, and hassle-free.
+                        You have nothing to lose except the stress and expense of selling your house any other way.</p>
+                    <img src="../../../assets/how-it-works/howtosellhouse.png" alt="" width="100%">
+
+                </div>
+
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-12  order-lg-2 order-md-2 order-1">
+                <div class="fifth-section py-5 px-3  rounded rounded-4">
+                    <h4 class="pb-4">Set up a free, no-commitment home review.</h4>
+
+                    <form #contactForm="ngForm" (ngSubmit)="contactFormData(contactForm)" class="needs-validation"
+                        novalidate="">
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.firstName" placeholder="First Name"
+                                        name="firstName" #firstNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">First name*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.lastName" placeholder="Last Name"
+                                        name="lastName" #lastNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Last name*</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.phoneNumber" placeholder="Phone Number"
+                                        [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"
+                                        ngModel required="">
+                                    <label for="floatingInput">Phone Number*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.email" placeholder="Email" name="email"
+                                        #emailRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Email*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        ngx-google-places-autocomplete [options]="options"
+                                        (onAddressChange)="handleAddressChange($event)" id="floatingInput"
+                                        [(ngModel)]="formData.sessionFullStreetAddress" placeholder="Property address"
+                                        name="streetAddress" #streetAddressRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Property address*</label>
+                                    <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                                        <img src="../../../assets/images/powered-by-google-transparent.png" width="100"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-4 form-check" id="confirm-msg">
+                            <input type="checkbox" class="form-check-input" name="confirm"
+                                [(ngModel)]="formData.confirm" required>
+                            <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and
+                                provide my
+                                consent
+                                for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the
+                                phone
+                                number provided
+                                above via text (SMS) or calling using automated dialing technology to schedule an
+                                appointment and for
+                                marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent
+                                not
+                                required to
+                                purchase services. Message and data rates may apply. Message frequency varies by
+                                account. To opt-out at
+                                any
+                                time reply STOP to the message you receive. For more information, please review our <a
+                                    href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy"
+                                    target="_blank">Privacy
+                                    Policy</a>.
+                            </label>
+
+                        </div>
+                        <div class="mt-4">
+                            <!-- <button class="btn btn-danger px-5 py-3" id="button-vary1" type="submit" 
+                  [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+                            <button type="submit" class="btn btn-warning px-5 py-3" id="button-vary1"
+                                [disabled]="!contactForm.form.valid">Get my fair cash offer</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="let-get-you-moving">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-lg-10 col-12">
+                <p class="fs-4 fw-bold">It’s as easy as 1–2–3!</p>
+                <p class="fs-5">Let’s get started for free today—no obligation and no pressure. <br /> With just a quick
+                    visit to your house, we can often make you a fair cash offer on the spot!</p>
+
+            </div>
+
+        </div>
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a class="btn btn-warning p-3" href="contact-us">Contact us Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

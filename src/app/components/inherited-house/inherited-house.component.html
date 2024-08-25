@@ -1,1 +1,192 @@
-<p>inherited-house works!</p>
+<app-navbar></app-navbar>
+<section class="common-header">
+    <div class="container">
+        <div class="row vh-50 d-flex justify-content-left align-items-center ">
+            <div class="col-lg-10">
+                <h1 class="fw-bold">Selling an inherited house.</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="how-it-works">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-12">
+                <div>
+                    <h4>Wondering what happens when you inherit a house?</h4>
+                    <p>It’s an amazing kindness when a relative remembers you by willing you a house. But often, what
+                        happens when you inherit a house is you become responsible for the monthly mortgage payments,
+                        the annual insurance premiums, property taxes and any other liens or debt on the property. You
+                        may own it with other relatives that all have a say in the decisions about the house. And
+                        there’s Federal inheritance tax to pay. Plus, you may be having to deal with the house from
+                        several states away.</p>
+                    <p>In our experience, it’s pretty common that an inherited house becomes more of a burden than a
+                        blessing.</p>
+                </div>
+                <div>
+                    <h4>You have options for selling an inherited house.</h4>
+                    <p>Usually, people who want to sell an inherited house consider the traditional listing and selling
+                        process first. What they rarely consider is the upfront cost of updating, repairing, cleaning,
+                        and staging the house to get it ready for sale, all while potentially needing multiple parties
+                        to agree on each of those decisions. Then there are real estate agent fees and closing costs to
+                        consider. Plus, there’s no guarantee how quickly it will sell.</p>
+
+                </div>
+
+                <div>
+                    <h4>What about a quick all-cash sale?</h4>
+                    <p>A quick and easy cash sale to I Buy Ugly Houses® can be just the solution. You don’t need to the
+                        clean the property or repair anything. We can even deal with the contents of the house. Take
+                        whatever you want and leave the rest. </p>
+                    <p>We don’t charge commissions, and we pay all normal closing costs. We can close in as few as three
+                        weeks, or later, if you like, and you could have cash to pay inheritance taxes, resolve debt,
+                        and put in savings. The only thing you and the other inheritors have to agree on is our all-cash
+                        offer to buy the house “as is.”</p>
+
+                </div>
+
+                <div>
+                    <h4>How we work</h4>
+                    <p>I Buy Ugly Houses® treats each seller, house, and situation as unique and works with you to
+                        determine how we can help you best. We’ve helped more homeowners out of ugly situations than
+                        anyone and have the trusted know-how to close quickly with an all-cash offer. With over 10 years
+                        of experience buying houses, our long-lasting relationships with lenders makes financing easy.
+                        We’ll visit the house you’ve inherited at no cost, and you’re under no obligation to accept our
+                        offer. Our goal is to make selling quick, easy, and hassle-free.</p>
+                        
+                        <img src="../../../assets/how-it-works/howtosellhouse.png" alt="" width="100%">
+                </div>
+                <div>
+                    <h4>What about the other cash buyers you hear about lately?</h4>
+                    <p>Sure, there are other cash home buyers, but many of them will lower their initial offers or
+                        reduce the cash coming to you with surprise fees. Others will back out of the deal entirely when
+                        they can’t secure financing for the purchase.</p>
+                    <p>I Buy Ugly Houses is America’s #1 home buyer—we’ve purchased over 100+ houses since 2014 the
+                        same way—in-person with people who live and work where you do. </p>
+                    <p>You have enough to deal with in the wake of a loved one’s death. Talk to us about how we can make
+                        the sale of the house one thing that’s quick and easy.</p>
+                </div>
+
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-12  order-lg-2 order-md-2 order-1">
+                <div class="fifth-section py-5 px-3  rounded rounded-4">
+                    <h4 class="pb-4">Set up a free, no-commitment home review.</h4>
+
+                    <form #contactForm="ngForm" (ngSubmit)="contactFormData(contactForm)" class="needs-validation"
+                        novalidate="">
+
+                        <div class="row">
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.firstName" placeholder="First Name"
+                                        name="firstName" #firstNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">First name*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6  col-md-6 col-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.lastName" placeholder="Last Name"
+                                        name="lastName" #lastNameRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Last name*</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="tel" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.phoneNumber" placeholder="Phone Number"
+                                        [inputMask]="phoneNumberInputMask" name="phoneNumber" #phoneNumberRef="ngModel"
+                                        ngModel required="">
+                                    <label for="floatingInput">Phone Number*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" autocomplete="new-password"
+                                        id="floatingInput" [(ngModel)]="formData.email" placeholder="Email" name="email"
+                                        #emailRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Email*</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" autocomplete="new-password"
+                                        ngx-google-places-autocomplete [options]="options"
+                                        (onAddressChange)="handleAddressChange($event)" id="floatingInput"
+                                        [(ngModel)]="formData.sessionFullStreetAddress" placeholder="Property address"
+                                        name="streetAddress" #streetAddressRef="ngModel" ngModel required="">
+                                    <label for="floatingInput">Property address*</label>
+                                    <div class="d-lg-block d-md-block d-block mb-lg-0 mb-md-0 m-2">
+                                        <img src="../../../assets/images/powered-by-google-transparent.png" width="100"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-4 form-check" id="confirm-msg">
+                            <input type="checkbox" class="form-check-input" name="confirm"
+                                [(ngModel)]="formData.confirm" required>
+                            <label class="form-check-label" for="exampleCheck1">By checking this box, I authorize and
+                                provide my
+                                consent
+                                for IBuyUglyHouses® or its franchisees, or their service providers, to contact me at the
+                                phone
+                                number provided
+                                above via text (SMS) or calling using automated dialing technology to schedule an
+                                appointment and for
+                                marketing purposes related to the IBuyUglyHouses® services I am inquiring about. Consent
+                                not
+                                required to
+                                purchase services. Message and data rates may apply. Message frequency varies by
+                                account. To opt-out at
+                                any
+                                time reply STOP to the message you receive. For more information, please review our <a
+                                    href="terms-of-use" target="_blank">Terms of Use</a> and <a href="privacy-policy"
+                                    target="_blank">Privacy
+                                    Policy</a>.
+                            </label>
+
+                        </div>
+                        <div class="mt-4">
+                            <!-- <button class="btn btn-danger px-5 py-3" id="button-vary1" type="submit" 
+                  [disabled]="!contactForm.form.valid">Get a cash offer</button> -->
+                            <button type="submit" class="btn btn-warning px-5 py-3" id="button-vary1"
+                                [disabled]="!contactForm.form.valid">Get my fair cash offer</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="let-get-you-moving">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
+            <div class="col-lg-10 col-12">
+                <p class="fs-4 fw-bold">It’s as easy as 1–2–3!</p>
+                <p class="fs-5">Let’s get started for free today—no obligation and no pressure. <br /> With just a quick
+                    visit to your house, we can often make you a fair cash offer on the spot!</p>
+
+            </div>
+
+        </div>
+        <div class="row justify-content-center align-items-center text-center ">
+            <div class="col-lg-3 col-md-4 col-12">
+                <a class="btn btn-warning p-3" href="contact-us">Contact us Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-sub-footer-contact-info></app-sub-footer-contact-info>
+<app-footer></app-footer>

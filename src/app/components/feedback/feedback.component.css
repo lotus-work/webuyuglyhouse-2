@@ -20,7 +20,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(90deg, rgba(162, 75, 75, 0.84) 19.27%, rgba(217, 217, 217, 0) 100%);
+    background: linear-gradient(90deg, rgba(75, 162, 136, 0.84) 19.27%, rgba(217, 217, 217, 0) 100%);
     z-index: -1;
 }
 
@@ -34,14 +34,14 @@
 
 
 .second-section hr{
-    border: 1px solid red !important
+    border: 1px solid #3ebbb1 !important
 }
 
 
 /* second */
 
 .third-section{
-    background-color: #a81c1c;
+    background-color: #3ebbb1;
     padding: 100px 0;
     color: #fff;
 }

@@ -178,7 +178,7 @@ a {
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover,
 .offcanvas a:focus {
-    color: #000000;
+    color: #a9a5a5;
 }
 
 /* Position and style the close button (top right corner) */
